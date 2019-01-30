@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:paddingLeft="@dimen/activity_horizontal_margin" android:paddingTop="@dimen/activity_vertical_margin" android:paddingRight="@dimen/activity_horizontal_margin" android:paddingBottom="@dimen/activity_vertical_margin" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="28.0sp" android:gravity="center_horizontal" android:id="@id/tvHeader" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/cap_header_select_donate" android:layout_alignParentTop="true" />
+    <ScrollView android:id="@id/scrollView" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/tvMessage" android:layout_below="@id/lvDonate" android:layout_centerHorizontal="true">
+        <TextView android:id="@id/tvLog" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="New Text" />
+    </ScrollView>
+    <LinearLayout android:orientation="horizontal" android:id="@id/pnButtons" android:layout_width="fill_parent" android:layout_height="wrap_content" android:weightSum="100.0" android:layout_alignParentLeft="true" android:layout_alignParentBottom="true">
+        <Button android:id="@id/btCancel" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/cap_button_cancel" android:layout_weight="50.0" />
+        <Button android:id="@id/btMakePurchase" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/cap_button_make" android:layout_weight="50.0" />
+    </LinearLayout>
+    <ListView android:id="@id/lvDonate" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_above="@id/tvMessage" android:layout_below="@id/tvHeader" android:layout_centerHorizontal="true" />
+    <TextView android:textSize="24.0sp" android:gravity="center_horizontal" android:id="@id/tvMessage" android:paddingBottom="4.0sp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="New Text" android:layout_above="@id/pnButtons" />
+</RelativeLayout>

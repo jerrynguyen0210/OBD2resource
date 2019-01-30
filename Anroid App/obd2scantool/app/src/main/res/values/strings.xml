@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="common_google_play_services_unknown_issue">%1$s is having trouble with Google Play services. If the problem persists, please contact the developer for assistance.</string>
+    <string name="app_name">OBD2 Scan Tool</string>
+    <string name="cap_button_apply">Apply</string>
+    <string name="cap_button_cancel">Cancel</string>
+    <string name="cap_button_continue">Continue</string>
+    <string name="cap_button_exit">Exit</string>
+    <string name="cap_button_make">Make</string>
+    <string name="cap_button_make_donate">Make donate</string>
+    <string name="cap_button_make_once_more">Make once more</string>
+    <string name="cap_can_settings">Can settings for</string>
+    <string name="cap_pid_settings">PID settings </string>
+    <string name="cap_pid_mode">PID check mode </string>
+    <string name="cap_pid_value">Type </string>
+    <string name="cap_channel1">Channel1</string>
+    <string name="cap_channel2">Channel2</string>
+    <string name="cap_error">Error</string>
+    <string name="cap_header_mode">Mode</string>
+    <string name="cap_display_mode">Display</string>
+    <string name="cap_header_rate">Rate</string>
+    <string name="cap_header_select_donate">Select donation you want to make</string>
+    <string name="cap_menu_about">About</string>
+    <string name="cap_menu_clear_data">Clear data</string>
+    <string name="cap_menu_donation">Donation</string>
+    <string name="cap_menu_send_email">Send log to developer</string>
+    <string name="cap_menu_settings">Settings</string>
+    <string name="cap_set_keep_screen_on">Keep screen on while bus listening</string>
+    <string name="cap_set_screen_orientation">Screen orientation</string>
+    <string name="cap_tab_log">Log</string>
+    <string name="cap_tab_table">Table</string>
+    <string name="cap_tab_trace">Trace</string>
+    <string name="cap_table_count">Count</string>
+    <string name="cap_table_data">Data</string>
+    <string name="cap_table_id">PID</string>
+    <string name="cap_table_interval">Cycle</string>
+    <string name="cap_table_length">Len</string>
+    <string name="cap_table_number">\#</string>
+    <string name="cap_table_time">Time</string>
+    <string name="info_donation">"Hello.
+ The CanBusAnalyzer is not commercial application.
+ You can use it free without any charge.
+ But if you have the desire to help in the develpment of this project you are welcome to make some donation."</string>
+    <string name="mode_extended">Extended</string>
+    <string name="mode_standard">Standard</string>
+    <string name="msg_donation_service_error">Error of connection with Google billing service</string>
+    <string name="msg_gratitude_for_donation">Thank you for participation</string>
+    <string name="str_msg_adapter_not_connected">CAN bus adapter is not connected</string>
+    <string name="str_msg_need_btr_set">You should set btr registers value</string>
+    <string name="str_trace_status_head">General frame count:</string>
+    <string name="txt_adapter_header">USB-CAN OBD2 Scan tool</string>
+    <string name="accept">Accept</string>
+    <string name="ads_unit_id_demo">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="ads_unit_id_trace">ca-app-pub-1328633298301741/2448696141</string>
+    <string name="auth_google_play_services_client_facebook_display_name">Facebook</string>
+    <string name="auth_google_play_services_client_google_display_name">Google</string>
+    <string name="btcap_check">↺</string>
+    <string name="create_calendar_message">Allow Ad to create a calendar event?</string>
+    <string name="create_calendar_title">Create calendar event</string>
+    <string name="decline">Decline</string>
+    <string name="def_set_screen_orientation">PORTRAIT</string>
+    <string name="store_picture_message">Allow Ad to store image in Picture gallery?</string>
+    <string name="store_picture_title">Save image</string>
+</resources>

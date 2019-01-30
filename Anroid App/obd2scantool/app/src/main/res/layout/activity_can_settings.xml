@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/black_overlay" android:paddingLeft="@dimen/can_settings_horizontal_margin" android:paddingTop="@dimen/can_settings_vertical_margin" android:paddingRight="@dimen/can_settings_horizontal_margin" android:paddingBottom="@dimen/can_settings_vertical_margin" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:background="@color/back2" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/linearLayout2" android:layout_alignParentTop="true" android:layout_alignParentRight="true">
+            <TextView android:gravity="center_horizontal" android:id="@id/tvHeader" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/cap_can_settings" />
+            <LinearLayout style="@style/CanSettingsRow">
+                <TextView android:id="@id/textView2" android:text="@string/cap_header_mode" style="@style/CanSettings.Col1" />
+                <Spinner android:id="@id/spMode" android:spinnerMode="dropdown" style="@style/CanSettings.Col2" />
+            </LinearLayout>
+            <LinearLayout style="@style/CanSettingsRow">
+                <TextView android:id="@id/textView3" android:text="@string/cap_header_rate" style="@style/CanSettings.Col1" />
+                <LinearLayout android:orientation="vertical" style="@style/CanSettings.Col2">
+                    <Spinner android:id="@id/spRate" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                        <TextView android:id="@id/textView4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="BTR0" />
+                        <EditText android:id="@id/edBTR0" style="@style/CanSettingsBTREdit" />
+                        <TextView android:id="@id/textView5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="BTR1" />
+                        <EditText android:id="@id/edBTR1" style="@style/CanSettingsBTREdit" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout style="@style/CanSettingsRow">
+                <TextView android:id="@id/textView3" android:text="@string/cap_display_mode" style="@style/CanSettings.Col1" />
+                <Spinner android:id="@+id/spDisplay" android:spinnerMode="dropdown" style="@style/CanSettings.Col2" />
+            </LinearLayout>
+            <LinearLayout style="@style/CanSettingsRow">
+                <TextView android:id="@id/textView4" android:text="Data Format" style="@style/CanSettings.Col1" />
+                <Spinner android:id="@+id/spDisplay2" android:spinnerMode="dropdown" style="@style/CanSettings.Col2" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:id="@id/linearLayout2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:weightSum="100.0" android:layout_alignParentBottom="true">
+            <Button android:id="@id/btCancel" android:text="@string/cap_button_cancel" style="@style/CanSettingsButton" />
+            <Button android:id="@id/btApply" android:text="@string/cap_button_apply" style="@style/CanSettingsButton" />
+        </LinearLayout>
+    </RelativeLayout>
+    <android.inputmethodservice.KeyboardView android:id="@id/keyboardview" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+</RelativeLayout>
