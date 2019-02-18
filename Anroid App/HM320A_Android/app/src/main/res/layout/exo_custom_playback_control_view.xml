@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2016 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:weightSum="1080">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="150"
+        android:background="@drawable/player_controls_bg_top">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageButton
+                android:id="@+id/btn_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="20.67dp"
+                android:background="@drawable/selector_player_back"/>
+
+            <TextView
+                android:id="@+id/tv_video_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:textSize="@dimen/size_50px"
+                android:textColor="@color/white"
+                android:text="@string/symbol_dash"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="600"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="330"
+        android:orientation="vertical"
+        android:weightSum="330"
+        android:background="@drawable/player_controls_bg_bottom">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="150"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="1920">
+            <TextView
+                android:id="@id/exo_position"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="277"
+                android:gravity="center_vertical|end"
+                android:paddingEnd="8.33dp"
+                android:text="@string/symbol_dash"
+                android:textSize="@dimen/size_50px"
+                android:includeFontPadding="false"
+                android:textColor="#FF16D3FF"/>
+            <com.google.android.exoplayer2.ui.DefaultTimeBar
+                android:id="@id/exo_progress"
+                app:played_color="#FF16D3FF"
+                app:buffered_color="#4082807E"
+                app:unplayed_color="#4082807E"
+                app:scrubber_enabled_size="16.00dp"
+                app:scrubber_dragged_size="20.00dp"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_weight="1366"/>
+            <TextView
+                android:id="@id/exo_duration"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="277"
+                android:gravity="center_vertical|start"
+                android:paddingStart="8.33dp"
+                android:text="@string/symbol_dash"
+                android:textSize="@dimen/size_50px"
+                android:includeFontPadding="false"
+                android:textColor="#FFFFFFFF"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="180"
+            android:orientation="horizontal"
+            android:weightSum="1920">
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="274"/>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1372"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+                <ImageButton android:id="@id/exo_prev"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="30.00dp"
+                    android:background="@drawable/selector_player_prev"/>
+                <ImageButton
+                    android:id="@id/exo_play"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/selector_player_play"/>
+                <ImageButton
+                    android:id="@id/exo_pause"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/selector_player_pause"/>
+                <ImageButton android:id="@id/exo_next"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30.00dp"
+                    android:background="@drawable/selector_player_next"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="274">
+                <ImageButton android:id="@+id/btn_channel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/selector_player_front_ch"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

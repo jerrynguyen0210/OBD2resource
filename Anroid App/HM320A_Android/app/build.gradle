@@ -1,0 +1,71 @@
+apply plugin: 'com.android.application'
+
+android {
+   signingConfigs {
+        release {
+            keyAlias 'aone_Release'
+            keyPassword '123456'
+            storeFile file('./Aone_release.jks')
+            storePassword '123456'
+        }
+        debug {
+        }
+    }
+    
+    compileSdkVersion 27
+    buildToolsVersion "27.0.2"
+    defaultConfig {
+        applicationId "com.adasone.hm320a"
+        minSdkVersion 19
+        targetSdkVersion 27
+        versionCode 910
+        versionName "1.0.00.181217"
+    }
+
+    sourceSets.main {
+        jni.srcDirs = [] //disable automatic ndk-build call
+    }
+
+    buildTypes {
+        release {
+            signingConfig signingConfigs.release
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            debuggable false            
+            jniDebuggable false
+            renderscriptDebuggable false
+            zipAlignEnabled true            
+        }
+        debug {
+            signingConfig signingConfigs.debug
+        }        
+    }
+}
+/*
+
+task ndkBuild(type: Exec, description: 'Compile JNI source via NDK') {
+    def ndkDir = project.android.ndkDirectory.absolutePath
+    commandLine "$ndkDir\\ndk-build.cmd ",
+            'NDK_PROJECT_PATH=build\\intermediates\\ndk',
+            'NDK_LIBS_OUT=src\\main\\jniLibs',
+            'APP_BUILD_SCRIPT=src\\main\\jni\\Android.mk',
+            'NDK_APPLICATION_MK=src\\main\\jni\\Application.mk'
+}
+
+
+tasks.withType(JavaCompile) {
+    compileTask -> compileTask.dependsOn ndkBuild
+}
+*/
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:27.0.2'
+    compile 'com.android.support:support-v4:27.0.2'
+    compile 'com.android.support:design:27.0.2'
+    compile 'com.google.android.exoplayer:exoplayer:r2.4.2'
+    testCompile 'junit:junit:4.12'
+}

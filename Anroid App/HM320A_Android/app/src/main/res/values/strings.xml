@@ -1,0 +1,262 @@
+<resources
+    xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">ADAS Manager</string>
+
+    <!-- Common -->
+    <string name="device_name">HM320</string>
+    <string name="symbol_dash">-</string>
+    <string name="unit_cm">cm</string>
+    <string name="main_date_time_display_format">dd MMM yyyy,hh:mm,a</string>
+    <string name="default_date_format">dd MMM yyyy</string>
+    <string name="calibration_date_format">yyyy-MM-dd</string>
+    <string name="yes">Yes</string>
+    <string name="yes_caps">YES</string>
+    <string name="no">No</string>
+    <string name="no_caps">NO</string>
+    <string name="send">Send</string>
+    <string name="send_caps">SEND</string>
+    <string name="ok">Ok</string>
+    <string name="ok_caps">OK</string>
+    <string name="next">Next</string>
+    <string name="next_caps">NEXT</string>
+    <string name="save">Save</string>
+    <string name="save_caps">SAVE</string>
+    <string name="select">Select</string>
+    <string name="select_caps">SELECT</string>
+    <string name="cancel">Cancel</string>
+    <string name="cancel_caps">CANCEL</string>
+    <string name="download">Download</string>
+    <string name="download_caps">DOWNLOAD</string>
+    <string name="delete">Delete</string>
+    <string name="delete_caps">DELETE</string>
+    <string name="delete_count">Delete (%1$d / %2$d)</string>
+    <string name="delete_caps_count">DELETE (%1$d / %2$d)</string>
+    <string name="play">Play</string>
+    <string name="play_caps">PLAY</string>
+    <string name="connected_to_device">Connected to device.</string>
+    <string name="disconnected_to_device">Disconnected to device.</string>
+    <string name="connection_with_device_failed">The connection with the device failed.</string>
+    <string name="permission_needs_description">This permission is required to use the features.</string>
+    <string name="permission_denied_description">Denied permission. You can not proceed to the next step.</string>
+    <string name="check_usb_connection">Please check USB connection status.</string>
+    <string name="check_network_connection">Unable to connect to the network.\nCheck your network settings and try again.</string>
+    <string name="error_reason">[Error] %1$s.</string>
+    <string name="server_error_other_parsing_error">Server error code. 0001</string>
+    <string name="server_error_result_key_not_exist">Server error code. 0002</string>
+    <string name="server_error_result_fail">Server error code. 0003</string>
+    <string name="server_error_key_not_exist">Server error code. 0004</string>
+    <string name="server_error_file_size">Server error code. 0005</string>
+    <string name="server_error_items_empty">Server error code. 0006</string>
+    <string name="unknown">Unknown</string>
+    <string name="device_connection_failure">Connection failure</string>
+    <string name="device_connection_failure_desc">Device connection was failed.\nClose the app and connect USB cable again.</string>
+    <string name="device_connection_dialog_title">USB connection status</string>
+    <string name="device_connection_dialog_open_desc">Connected to device.</string>
+    <string name="device_connection_dialog_close_desc">Disconnected to device.</string>
+    <string name="device_no_response">No response from the device.</string>
+    <string name="error_wrong_format">Error: The setting value does not match the format.</string>
+    <string name="notification">Notification</string>
+    <string name="insufficient_storage">Storage space running out.</string>
+    <string name="latest_date_of_change">Latest : %1$s</string>
+    <string name="deleting">Deleting &#8230;</string>
+    <string name="notice">notice</string>
+
+    <!-- Vehicle Information -->
+    <string name="vehicle_information">Vehicle Information</string>
+    <string name="driver_information">Driver Information</string>
+    <string name="manufacturer">Manufacturer</string>
+    <string name="model">Model</string>
+    <string name="model_name">Model Name</string>
+    <string name="fuel_type">Fuel Type</string>
+    <string name="release_date">Release Date</string>
+
+    <string name="vehicle_type_car">Passenger car</string>
+    <string name="vehicle_type_bus">Bus</string>
+    <string name="vehicle_type_truck">Truck</string>
+
+    <string name="vehicle_type">Vehicle Type</string>
+    <string name="vehicle_identification_number">Vehicle Identification Number</string>
+    <string name="vehicle_registration_number">Vehicle Registration Number</string>
+    <string name="business_registration_number">Business Registration Number</string>
+    <string name="driver_code">Driver License ID</string>
+
+    <string name="select_vehicle_type">Please select a vehicle type.</string>
+    <string name="enter_vin_code">Please enter the vehicle identification number.</string>
+    <string name="wrong_vin_code">The vehicle identification number is incorrect.\nPlease enter again.</string>
+    <string name="enter_vehicle_registration_number">Please enter the vehicle registration number.</string>
+    <string name="wrong_vehicle_registration_number">The vehicle registration number is incorrect.\nPlease enter again.</string>
+    <string name="enter_business_registration_number">Please enter the business registration number.</string>
+    <string name="wrong_business_registration_number">The business registration number is incorrect.\nPlease enter again.</string>
+    <string name="enter_driver_code">Please enter the driver license id.</string>
+    <string name="wrong_driver_code">The driver license id is incorrect.\nPlease enter again.</string>
+
+    <string name="enter_vehicle_info">Please enter the vehicle Information.</string>
+    <string name="enter_driver_info">Please enter the driver Information.</string>
+
+    <string name="type_city_bus">11 City Bus</string>
+    <string name="type_rural_bus">12 Rural Bus</string>
+    <string name="type_town_bus">13 Town Bus</string>
+    <string name="type_intercity_bus">14 Intercity Bus</string>
+    <string name="type_express_bus">15 Express Bus</string>
+    <string name="type_chartered_bus">16 Chartered Bus</string>
+    <string name="type_special_passenger_vehicle">17 Special Passenger Vehicle</string>
+    <string name="type_regular_taxi">21 Regular Taxi</string>
+    <string name="type_private_taxi">22 Private Taxi</string>
+    <string name="type_general_lorry">31 General Truck</string>
+    <string name="type_individual_lorry">32 Individual Truck</string>
+    <string name="type_non_commercial_vehicle">41 Non-commercial Vehicle</string>
+
+    <string name="step1">STEP 1</string>
+    <string name="step2">STEP 2</string>
+    <string name="step3">STEP 3</string>
+    <string name="step4">STEP 4</string>
+    <string name="step5">STEP 5</string>
+
+    <string name="success_send_vehicle_info">Vehicle information was set up.</string>
+
+    <string name="vehicle_info_send_to_email">Apply registration of vehicle information</string>
+    <string name="vehicle_info_send_to_email_underline"><u>Apply registration information</u></string>
+    <string name="vehicle_info_send_to_email_desc">Enter [Manufacturer/Model/Fuel type/Release year]</string>
+    <string name="vehicle_info_email_extra_text">Manufacturer : \nModel : \nFuel type : \nRelease year : </string>
+
+    <!-- Calibration -->
+    <string name="calibration">Calibration</string>
+    <string name="calibration_date">Calibration Date</string>
+    <string name="camera_height">Camera Height</string>
+    <string name="vehicle_width">Vehicle Width</string>
+    <string name="camera_to_bumper">Camera to Bumper</string>
+
+    <string name="bumper_to_chess">Bumper to Chessboard</string>
+    <string name="chess_height">Chessboard height</string>
+
+    <string name="camera_height_help_title">[A] Camera Height</string>
+    <string name="vehicle_width_help_title">[B] Vehicle Width</string>
+    <string name="camera_to_bumper_help_title">[C] Camera to Bumper</string>
+
+    <string name="camera_height_help_desc">Measure and enter the height\nfrom the ground\nto the position of camera lens.</string>
+    <string name="vehicle_width_help_desc">Measure and enter the length\nfrom the both ends.</string>
+    <string name="camera_to_bumper_help_desc">Measure and enter the length\nfrom vehicle bumper\nto the position of camera lens.</string>
+
+    <string name="bonnet_line">Bonnet Line</string>
+    <string name="vanishing_point">Vanishing point</string>
+    <string name="meter_5">5 meters</string>
+    <string name="meter_8">8 meters</string>
+    <string name="meter_10">10 meters</string>
+    <string name="meter_15">15 meters</string>
+    <string name="total">Total</string>
+    <string name="zoom_in">Zoom In</string>
+    <string name="zoom_out">Zoom Out</string>
+    <string name="measure">Measure</string>
+    <string name="no_bonnet">No Line</string>
+    <string name="bonnet">Line</string>
+
+    <string name="enter_camera_height">Please enter the camera height.</string>
+    <string name="enter_vehicle_width">Please enter the vehicle width.</string>
+    <string name="enter_camera_to_bumper">Please enter the length from bumper to the position of camera.</string>
+
+    <string name="enter_bumper_to_chess">Please enter the length from chess board to the position of bumper.</string>
+    <string name="enter_chess_height">Please enter the chess board height.</string>
+
+    <string name="calibration_img_not_exit">No calibration images.\nSend images from device.</string>
+    <string name="calibration_auto_img_not_exit">No auto calibration images.\nSend images from device.</string>
+    <string name="calibration_img_received">Successfully received the image.</string>
+
+    <string name="success_send_calibration_info">Calibration information was set up.</string>
+    <string name="vanishing_point_invalid">Please correct vanishing point or 4 calibration points.</string>
+
+    <string name="measurement_not_complete">Please complete the measurement.</string>
+    <string name="measured_value_incorrect">Calibration value is incorrect.\nPlease try again.</string>
+    <string name="failed_recognize_chessboard">Failed to recognize the chessboard.</string>
+
+    <!-- DTG Information -->
+    <string name="dtg_setting">DTG Settings</string>
+    <string name="dtg_temporary_desc">DTG service is being prepared.</string>
+    <string name="success_send_dtg_info">DTG information was set up.</string>
+
+    <!-- Recorded Video -->
+    <string name="recorded_video">Recorded Video</string>
+    <string name="normal">Normal</string>
+    <string name="event">Event</string>
+
+    <string name="download_video_title">Downloading video file &#8230;</string>
+    <string name="download_video_file_name">File : %1$s</string>
+    <string name="download_video_file_size">Size : %1$s / %2$s KB</string>
+    <string name="download_video_file_size_unknown">Size : </string>
+    <string name="no_files">No files</string>
+    <string name="date">Date</string>
+    <string name="time">Time</string>
+    <string name="file_name">File name</string>
+
+    <string name="no_downloaded_file_can_be_deleted">There is no recorded video that can be deleted.</string>
+
+    <string name="downloaded_file_count_one">%1$d file downloaded</string>
+    <string name="downloaded_file_count_other">%1$d files downloaded</string>
+    <plurals name="downloaded_file_count">
+        <item quantity="one">@string/downloaded_file_count_one</item>
+        <item quantity="other">@string/downloaded_file_count_other</item>
+    </plurals>
+
+    <string name="delete_downloaded_file_title_one">Delete downloaded file</string>
+    <string name="delete_downloaded_file_title_other">Delete downloaded files</string>
+    <plurals name="delete_downloaded_file_title">
+        <item quantity="one">@string/delete_downloaded_file_title_one</item>
+        <item quantity="other">@string/delete_downloaded_file_title_other</item>
+    </plurals>
+
+    <string name="delete_downloaded_file_count_one">%1$d downloaded file will be deleted.</string>
+    <string name="delete_downloaded_file_count_other">%1$d downloaded files will be deleted.</string>
+    <plurals name="delete_downloaded_file_count">
+        <item quantity="one">@string/delete_downloaded_file_count_one</item>
+        <item quantity="other">@string/delete_downloaded_file_count_other</item>
+    </plurals>
+
+    <!-- Exo player -->
+    <string name="player_error_querying_decoders">Unable to query device decoders</string>
+    <string name="player_error_no_secure_decoder">This device does not provide a secure decoder for <xliff:g id="mime_type">%1$s</xliff:g></string>
+    <string name="player_error_no_decoder">This device does not provide a decoder for <xliff:g id="mime_type">%1$s</xliff:g></string>
+    <string name="player_error_instantiating_decoder">Unable to instantiate decoder <xliff:g id="decoder_name">%1$s</xliff:g></string>
+    <string name="player_error_unsupported_video">Media includes video tracks, but none are playable by this device</string>
+    <string name="player_error_unsupported_audio">Media includes audio tracks, but none are playable by this device</string>
+    <string name="player_error_loading_data_from_source">Loading error.</string>
+    <string name="player_error_unexpected">Runtime error.</string>
+
+    <!-- Firmware Update -->
+    <string name="firmware_update">Firmware Update</string>
+    <string name="firmware_version">Firmware Version</string>
+    <string name="firmware_version_with_value">Version : %1$s</string>
+    <string name="version_check">Version Check</string>
+    <string name="latest_version">Latest Version</string>
+    <string name="latest_version_desc">Latest firmware version.</string>
+    <string name="download_firmware_download_title">Downloading firmware &#8230;</string>
+    <string name="download_firmware_download_desc">Downloading firmware.\nDo not close the app, and wait.</string>
+    <string name="download_firmware_send_title">Sending firmware &#8230;</string>
+    <string name="download_firmware_send_desc">Sending firmware.\nDo not close the app, and wait.</string>
+    <string name="found_new_version">There is a new version(%1$s MB)\nDo you want to download it now?</string>
+    <string name="new_version">New version</string>
+    <string name="download_complete">Download complete</string>
+    <string name="download_complete_description">Download is complete.</string>
+    <string name="transfer_complete_description">Transfer is complete.</string>
+    <string name="download_complete_need_usb_connection">Download is complete.\nConnect USB cable to transfer to the device.</string>
+    <string name="exist_new_firmware_file_need_usb_connection">There is a new version downloaded.\nConnect USB cable to transfer to the device.</string>
+    <string name="exist_new_firmware_file_transfer_now_question">There is a new version downloaded.\nDo you want to transfer it now?</string>
+    <string name="unknown_version_need_connection">No version information.\nPlease connect to device.</string>
+
+    <string name="version_incompatible_update_app">The device and app version are incompatible.\nPlease update your app.</string>
+    <string name="version_incompatible_update_device">The device and app version are incompatible.\nPlease update the device firmware.</string>
+
+    <!-- Communication error -->
+    <string name="comm_error_unknown_version">[ERROR]Unknown device version.</string>
+    <string name="comm_error_result_fail">[ERROR]Result fail : (%1$s)</string>
+    <string name="comm_error_result_unknown">[ERROR]Unknown result : (%1$s)</string>
+    <string name="comm_error_exception">[ERROR]Data error : (%1$s)</string>
+    <string name="comm_error_file_not_exist">No files.\nMight have been automatically deleted.</string>
+    <string name="comm_error_file_size_zero">File size zero.</string>
+
+    <!-- Debug -->
+    <string name="debug_calibration_bonnet">Bonnet Y : %1$d</string>
+    <string name="debug_calibration_no_bonnet_line">Bonnet Y : No line</string>
+    <string name="debug_calibration_vanishing">Center X : %1$d\nVanishing Y : %2$d</string>
+    <string name="debug_calibration_distance">Far Y : %1$d\nFar Left X : %2$d\nFar Right X : %3$d\nNear Y : %4$d\nNear Left X : %5$d\nNear Right X : %6$d</string>
+    <string name="debug_calibration_total">Bonnet Y : %1$d\nCenter X : %2$d\nVanishing Y : %3$d\nFar Y : %4$d\nFar Left X : %5$d\nFar Right X : %6$d\nNear Y : %7$d\nNear Left X : %8$d\nNear Right X : %9$d</string>
+    <string name="debug_calibration_no_bonnet_line_total">Bonnet Y : No line\nCenter X : %1$d\nVanishing Y : %2$d\nFar Y : %3$d\nFar Left X : %4$d\nFar Right X : %5$d\nNear Y : %6$d\nNear Left X : %7$d\nNear Right X : %8$d</string>
+</resources>

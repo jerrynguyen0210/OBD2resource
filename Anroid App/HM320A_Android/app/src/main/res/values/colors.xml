@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#FFFFFFFF</color>
+    <color name="black">#FF000000</color>
+    <color name="transparent">#00000000</color>
+    <color name="black_opacity_10">#1A000000</color>
+    <color name="black_opacity_20">#33000000</color>
+    <color name="black_opacity_30">#4D000000</color>
+    <color name="black_opacity_40">#66000000</color>
+    <color name="black_opacity_50">#80000000</color>
+    <color name="black_opacity_60">#99000000</color>
+    <color name="black_opacity_70">#B3000000</color>
+    <color name="black_opacity_80">#CC000000</color>
+    <color name="black_opacity_90">#E6000000</color>
+
+    <color name="white_opacity_10">#1AFFFFFF</color>
+    <color name="white_opacity_20">#33FFFFFF</color>
+    <color name="white_opacity_30">#4DFFFFFF</color>
+    <color name="white_opacity_40">#66FFFFFF</color>
+    <color name="white_opacity_50">#80FFFFFF</color>
+    <color name="white_opacity_60">#99FFFFFF</color>
+    <color name="white_opacity_70">#B3FFFFFF</color>
+    <color name="white_opacity_80">#CCFFFFFF</color>
+    <color name="white_opacity_90">#E6FFFFFF</color>
+
+    <color name="button_enable">#FFFFFFFF</color>
+    <color name="button_disable">#5d5d5d</color>
+
+    <color name="dialog_button_bg">#FFFFFFFF</color>
+    <color name="dialog_button_pressed_bg">#FFD9D9D9</color>
+</resources>
