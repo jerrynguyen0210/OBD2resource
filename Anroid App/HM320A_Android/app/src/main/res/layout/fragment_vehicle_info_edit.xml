@@ -15,6 +15,7 @@
 -->
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -106,6 +107,7 @@
             android:layout_weight="150"
             android:orientation="horizontal"
             android:weightSum="1080">
+
             <LinearLayout
                 android:id="@+id/layout_step"
                 android:layout_width="0dp"
@@ -114,16 +116,19 @@
                 android:background="@drawable/vehicle_info2_tt1"
                 android:orientation="horizontal"
                 android:weightSum="1007">
+
                 <View
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="87"/>
+                    android:layout_weight="87" />
+
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="920"
                     android:orientation="vertical"
                     android:weightSum="150">
+
                     <TextView
                         android:id="@+id/tv_step"
                         android:layout_width="wrap_content"
@@ -131,9 +136,10 @@
                         android:layout_weight="60"
                         android:gravity="bottom"
                         android:paddingStart="@dimen/size_76px"
+                        android:text="@string/step1"
                         android:textColor="@color/white_opacity_60"
-                        android:textSize="@dimen/size_30px"
-                        android:text="@string/step1"/>
+                        android:textSize="@dimen/size_30px" />
+
                     <TextView
                         android:id="@+id/tv_step_name"
                         android:layout_width="wrap_content"
@@ -141,9 +147,9 @@
                         android:layout_weight="90"
                         android:gravity="top"
                         android:paddingStart="@dimen/size_76px"
+                        android:text="@string/vehicle_type"
                         android:textColor="@color/white"
-                        android:textSize="@dimen/size_50px"
-                        android:text="@string/vehicle_type"/>
+                        android:textSize="@dimen/size_50px" />
 
                 </LinearLayout>
             </LinearLayout>

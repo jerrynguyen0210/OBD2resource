@@ -95,6 +95,7 @@ public class VehicleInfoEditFragment extends Fragment {
     private int mSelectModelPosition = 0;
     private int mSelectFuelTypePosition = 0;
     private int mSelectReleaseDatePosition = 0;
+    private int mEditPanelNumber = 0;
 
     private VehicleSelectListAdapter mVehicleSelectListAdapter = null;
 
@@ -102,8 +103,14 @@ public class VehicleInfoEditFragment extends Fragment {
         // Required empty public constructor
     }
 
-    public static VehicleInfoEditFragment newInstance() {
-        return new VehicleInfoEditFragment();
+    public static VehicleInfoEditFragment newInstance(int inPanelNum) {
+        VehicleInfoEditFragment fragment =  new VehicleInfoEditFragment();
+        fragment.setEditPanelNumber(inPanelNum);
+        return fragment;
+    }
+
+    private void setEditPanelNumber(int inNum) {
+        mEditPanelNumber = inNum;
     }
 
     @Override
@@ -164,7 +171,11 @@ public class VehicleInfoEditFragment extends Fragment {
         AppApplication.getAppApplication().setFontHYGothic400(mStepTextView);
         AppApplication.getAppApplication().setFontHYNSupungB(mOkButton);
 
-        mHandler.sendMessage(mHandler.obtainMessage(MSG_RETRIEVE_VEHICLE_TYPE));
+        if (mEditPanelNumber == 0) {
+            mHandler.sendMessage(mHandler.obtainMessage(MSG_RETRIEVE_VEHICLE_TYPE));
+        } else {
+            mHandler.sendMessage(mHandler.obtainMessage(MSG_RETRIEVE_CAN_BAURATE_TYPE));
+        }
         return root;
     }
 
@@ -301,6 +312,7 @@ public class VehicleInfoEditFragment extends Fragment {
     private static final int MSG_RETRIEVE_FUEL_TYPE = 3003;
     private static final int MSG_RETRIEVE_RELEASE_DATE = 3004;
     private static final int MSG_RETRIEVE_END = 3005;
+    private static final int MSG_RETRIEVE_CAN_BAURATE_TYPE = 3006;
 
     private static class MyHandler extends Handler {
         private final WeakReference<VehicleInfoEditFragment> mFragment;
@@ -329,6 +341,9 @@ public class VehicleInfoEditFragment extends Fragment {
                     break;
                 case MSG_RETRIEVE_END :
                     fragment.retrieveCompleted();
+                    break;
+                case MSG_RETRIEVE_CAN_BAURATE_TYPE :
+                    fragment.retrieveVehicleCanBaurateType();
                     break;
                 default :
                     break;
@@ -483,6 +498,21 @@ public class VehicleInfoEditFragment extends Fragment {
         mVehicleTypeArrayList.add(getString(R.string.vehicle_type_car));
         mVehicleTypeArrayList.add(getString(R.string.vehicle_type_bus));
         mVehicleTypeArrayList.add(getString(R.string.vehicle_type_truck));
+
+        mOkButton.setEnabled(true);
+        mHandler.sendMessage(mHandler.obtainMessage(MSG_RETRIEVE_END));
+    }
+
+    private void retrieveVehicleCanBaurateType() {
+        mOkButton.setEnabled(false);
+        mLoadingLayout.setVisibility(View.VISIBLE);
+        mListLayout.setVisibility(View.GONE);
+
+        mVehicleTypeArrayList.clear();
+
+        mVehicleTypeArrayList.add("125kps");
+        mVehicleTypeArrayList.add("250kps");
+        mVehicleTypeArrayList.add("500kps");
 
         mOkButton.setEnabled(true);
         mHandler.sendMessage(mHandler.obtainMessage(MSG_RETRIEVE_END));

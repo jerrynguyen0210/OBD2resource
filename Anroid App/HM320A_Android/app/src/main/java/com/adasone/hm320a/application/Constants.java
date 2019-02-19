@@ -24,6 +24,7 @@ public class Constants {
 
         public static final int VEHICLE = 10;
         public static final int VEHICLE_INFO_EDIT = 11;
+        public static final int VEHICLE_CAN_SETTINGS_EDIT = 12;
 
         public static final int CALIBRATION_CAM_LOCATION = 20;
         public static final int CALIBRATION_BONNET = 21;

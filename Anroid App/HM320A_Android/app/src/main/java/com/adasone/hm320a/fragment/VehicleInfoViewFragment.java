@@ -104,22 +104,25 @@ public class VehicleInfoViewFragment extends Fragment {
         ImageView editVehicleImageView = (ImageView) root.findViewById(R.id.iv_edit_vehicle);
         editVehicleImageView.setOnClickListener(mOnClickListener);
 
+        ImageView editVehicleImageView2 = (ImageView) root.findViewById(R.id.iv_edit_vehicle2);
+        editVehicleImageView2.setOnClickListener(mOnClickListener);
+
         Button sendButton = (Button) root.findViewById(R.id.btn_send);
         sendButton.setOnClickListener(mOnClickListener);
 
-        ImageView emailImageView = (ImageView) root.findViewById(R.id.iv_email);
-        emailImageView.setOnClickListener(mOnClickListener);
-        TextView sendEmailTextView = (TextView) root.findViewById(R.id.tv_vehicle_send_to_email);
-        sendEmailTextView.setOnClickListener(mOnClickListener);
-        TextView sendEmailDescTextView = (TextView) root.findViewById(R.id.tv_vehicle_send_to_email_desc);
+//        ImageView emailImageView = (ImageView) root.findViewById(R.id.iv_email);
+//        emailImageView.setOnClickListener(mOnClickListener);
+//        TextView sendEmailTextView = (TextView) root.findViewById(R.id.tv_vehicle_send_to_email);
+//        sendEmailTextView.setOnClickListener(mOnClickListener);
+//        TextView sendEmailDescTextView = (TextView) root.findViewById(R.id.tv_vehicle_send_to_email_desc);
 
         AppApplication.getAppApplication().setFontHYGothic900(titleTextView);
         AppApplication.getAppApplication().setFontHYGothic800(titleVehicleTextView);
         AppApplication.getAppApplication().setFontHYGothic700(manufacturerCaptionTextView,
                 modelCaptionTextView, fuelCaptionTextView, releaseDateCaptionTextView,
                 mManufacturerValueTextView, mModelValueTextView, mFuelValueTextView,
-                mReleaseDateValueTextView, sendEmailTextView);
-        AppApplication.getAppApplication().setFontHYGothic400(sendEmailDescTextView);
+                mReleaseDateValueTextView/*, sendEmailTextView*/);
+        //AppApplication.getAppApplication().setFontHYGothic400(/*sendEmailDescTextView*/);
         AppApplication.getAppApplication().setFontHYNSupungB(sendButton);
 
         mSession.getPreVehicleData().copyFrom(mSession.getDevVehicleData());
@@ -220,6 +223,9 @@ public class VehicleInfoViewFragment extends Fragment {
                 case R.id.iv_edit_vehicle :
                     mListener.onMenuSelected(Constants.Menu.VEHICLE_INFO_EDIT, 0);
                     break;
+                case R.id.iv_edit_vehicle2 :
+                    mListener.onMenuSelected(Constants.Menu.VEHICLE_CAN_SETTINGS_EDIT, 0);
+                    break;
                 case R.id.btn_send :
                     if (!mListener.isUSBConnected()) {
                         Toast.makeText(getContext(), R.string.check_usb_connection, Toast.LENGTH_SHORT).show();
@@ -230,11 +236,11 @@ public class VehicleInfoViewFragment extends Fragment {
                         getActivity().onBackPressed();
                     }
                     break;
-                case R.id.iv_email :
+ //               case R.id.iv_email :
                     // fall-through
-                case R.id.tv_vehicle_send_to_email :
-                    vehicleInfoSendToEmail();
-                    break;
+//                case R.id.tv_vehicle_send_to_email :
+//                  vehicleInfoSendToEmail();
+//                    break;
                 default:
                     break;
             }

@@ -27,6 +27,6 @@
 		android:textSize="@dimen/size_50px"
 		android:text="@string/symbol_dash"
 		android:scrollHorizontally="true"
-		android:maxLines="1"
+		android:singleLine="true"
 		android:ellipsize="marquee"/>
 </LinearLayout>

@@ -34,6 +34,6 @@
         android:paddingBottom="@dimen/size_6px"
         android:text="@string/symbol_dash"
         android:scrollHorizontally="true"
-        android:maxLines="1"
+        android:singleLine="true"
         android:ellipsize="marquee"/>
 </LinearLayout>

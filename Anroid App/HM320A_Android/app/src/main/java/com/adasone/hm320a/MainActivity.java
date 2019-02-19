@@ -638,7 +638,10 @@ public class MainActivity extends AppCompatActivity implements OnFragmentInterac
                 addFragment(VehicleInfoViewFragment.newInstance(), VehicleInfoViewFragment.FRAGMENT_TAG, Constants.Anim.NONE);
                 break;
             case Menu.VEHICLE_INFO_EDIT:
-                addFragment(VehicleInfoEditFragment.newInstance(), VehicleInfoEditFragment.FRAGMENT_TAG, Constants.Anim.NONE);
+                addFragment(VehicleInfoEditFragment.newInstance(0), VehicleInfoEditFragment.FRAGMENT_TAG, Constants.Anim.NONE);
+                break;
+            case Menu.VEHICLE_CAN_SETTINGS_EDIT:
+                addFragment(VehicleInfoEditFragment.newInstance(1), VehicleInfoEditFragment.FRAGMENT_TAG, Constants.Anim.NONE);
                 break;
             case Menu.CALIBRATION_CAM_LOCATION:
                 if (FileUtil.isExistCalibrationNormalPicture(mSession.getDeviceToken()) || FileUtil.isExistCalibrationFirstAutoPicture(mSession.getDeviceToken())) {

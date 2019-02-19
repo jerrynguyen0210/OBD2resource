@@ -68,4 +68,5 @@ dependencies {
     compile 'com.android.support:design:27.0.2'
     compile 'com.google.android.exoplayer:exoplayer:r2.4.2'
     testCompile 'junit:junit:4.12'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
 }
