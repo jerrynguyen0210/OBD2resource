@@ -183,16 +183,17 @@
                             android:text="@string/vehicle_information"
                             android:maxLines="1"
                             android:ellipsize="end"/>
+
                         <TextView
                             android:id="@+id/tv_4menus_menu1_description"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:paddingEnd="@dimen/size_6px"
-                            android:textSize="@dimen/size_46px"
-                            android:textColor="#00a2ca"
-                            android:text="@string/symbol_dash"
+                            android:ellipsize="end"
                             android:maxLines="1"
-                            android:ellipsize="end"/>
+                            android:paddingEnd="@dimen/size_6px"
+                            android:text="@string/symbol_dash"
+                            android:textColor="#00a2ca"
+                            android:textSize="@dimen/size_46px" />
                     </LinearLayout>
                     <View
                         android:layout_width="match_parent"

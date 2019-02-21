@@ -23,6 +23,9 @@ public class VehicleData implements Parcelable {
     private String mOBDModelID;
     private String mOBDFuelTypeID;
 
+    private String mCanBaurate;
+    private String mCanMode;
+
     public VehicleData() {
         this.mVehicleType = VehicleData.TYPE_CAR;
         this.mUniqueID = "";
@@ -33,6 +36,9 @@ public class VehicleData implements Parcelable {
         this.mOBDManufacturerID = "";
         this.mOBDModelID = "";
         this.mOBDFuelTypeID = "";
+
+        this.mCanBaurate = "";
+        this.mCanMode = "";
     }
 
     public VehicleData(int vehicleType, String uniqueID, String manufacturer, String model, String fuelType, String releaseDate,
@@ -104,6 +110,12 @@ public class VehicleData implements Parcelable {
         mOBDFuelTypeID = obdFuelType;
     }
 
+    public void setCanBaurateType(String canBaurateType) { mCanBaurate = canBaurateType; }
+    public void setCanModeType(String canModeType) { mCanMode = canModeType; }
+
+    public String getCanBaurateType() { return mCanBaurate; }
+    public String getCanModeType() { return mCanMode; }
+
     public void copyFrom(VehicleData data) {
         mVehicleType = data.getVehicleType();
         mUniqueID = data.getUniqueID();
@@ -114,6 +126,9 @@ public class VehicleData implements Parcelable {
         mOBDManufacturerID = data.getOBDManufacturerID();
         mOBDModelID = data.getOBDModelID();
         mOBDFuelTypeID = data.getOBDFuelTypeID();
+
+        mCanBaurate = data.mCanBaurate;
+        mCanMode = data.mCanMode;
     }
 
     public void initialize() {
@@ -126,6 +141,9 @@ public class VehicleData implements Parcelable {
         this.mOBDManufacturerID = "";
         this.mOBDModelID = "";
         this.mOBDFuelTypeID = "";
+
+        this.mCanMode = "";
+        this.mCanBaurate = "";
     }
 
     @Override

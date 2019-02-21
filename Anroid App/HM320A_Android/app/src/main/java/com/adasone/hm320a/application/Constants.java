@@ -108,5 +108,6 @@ public class Constants {
         public static final int CHANGE_DTG_DRIVER_INFO = 10002;
         public static final int VIDEO_COUNT_REFRESH = 10003;
         public static final int CALIBRATION_IMAGE_REFRESH = 10004;
+        public static final int CHANGE_CAN_SETTINGS_INFO = 10005;
     }
 }

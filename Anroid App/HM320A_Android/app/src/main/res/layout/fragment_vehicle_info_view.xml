@@ -14,6 +14,7 @@
      limitations under the License.
 -->
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -172,14 +173,14 @@
 
                     <View
                         android:id="@+id/view2"
-                        android:layout_width="46dp"
+                        android:layout_width="55dp"
                         android:layout_height="match_parent" />
 
                     <TextView
                         android:id="@+id/tv_manufacturer_caption"
                         android:layout_width="120dp"
                         android:layout_height="45dp"
-                        android:gravity="center"
+                        android:gravity="center|left"
                         android:text="@string/manufacturer" />
 
                     <TextView
@@ -195,14 +196,14 @@
 
                     <View
                         android:id="@+id/view3"
-                        android:layout_width="46dp"
+                        android:layout_width="55dp"
                         android:layout_height="match_parent" />
 
                     <TextView
                         android:id="@+id/tv_model_caption"
                         android:layout_width="120dp"
                         android:layout_height="45dp"
-                        android:gravity="center"
+                        android:gravity="center|left"
                         android:text="@string/model_name" />
 
                     <TextView
@@ -219,14 +220,14 @@
 
                     <View
                         android:id="@+id/view4"
-                        android:layout_width="46dp"
+                        android:layout_width="55dp"
                         android:layout_height="match_parent" />
 
                     <TextView
                         android:id="@+id/tv_fuel_caption"
                         android:layout_width="120dp"
                         android:layout_height="45dp"
-                        android:gravity="center"
+                        android:gravity="center|left"
                         android:text="@string/fuel_type" />
 
                     <TextView
@@ -242,14 +243,14 @@
 
                     <View
                         android:id="@+id/view5"
-                        android:layout_width="46dp"
+                        android:layout_width="55dp"
                         android:layout_height="match_parent" />
 
                     <TextView
                         android:id="@+id/tv_release_date_caption"
                         android:layout_width="120dp"
                         android:layout_height="45dp"
-                        android:gravity="center"
+                        android:gravity="center|left"
                         android:text="@string/release_date" />
 
                     <TextView
@@ -265,7 +266,7 @@
         <View
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="160" />
+            android:layout_weight="140" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -336,19 +337,19 @@
 
                     <View
                         android:id="@+id/view21"
-                        android:layout_width="46dp"
+                        android:layout_width="55dp"
                         android:layout_height="match_parent" />
 
                     <TextView
                         android:id="@+id/tv_can_baurate_caption"
                         android:layout_width="120dp"
                         android:layout_height="50dp"
-                        android:gravity="center"
+                        android:gravity="center|left"
                         android:text="CAN Baurate" />
 
                     <TextView
                         android:id="@+id/tv_baurate_value"
-                        android:layout_width="match_parent"
+                        android:layout_width="164dp"
                         android:layout_height="wrap_content"
                         android:text="@string/symbol_dash" />
                 </TableRow>
@@ -359,14 +360,14 @@
 
                     <View
                         android:id="@+id/view31"
-                        android:layout_width="46dp"
+                        android:layout_width="55dp"
                         android:layout_height="match_parent" />
 
                     <TextView
                         android:id="@+id/tv_can_mode_caption"
                         android:layout_width="120dp"
                         android:layout_height="50dp"
-                        android:gravity="center"
+                        android:gravity="center|left"
                         android:text="CAN Mode" />
 
                     <TextView

@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -180,6 +181,9 @@ public class VehicleInfoEditFragment extends Fragment {
         if (mEditPanelNumber == 0) {
             mHandler.sendMessage(mHandler.obtainMessage(MSG_RETRIEVE_VEHICLE_TYPE));
         } else {
+            mCurrentStep = STEP_CAN_BAURRATE;
+            mStepTextView.setText("SETTINGS");
+            mStepNameTextView.setText("CAN BAURATE");
             mHandler.sendMessage(mHandler.obtainMessage(MSG_RETRIEVE_CAN_BAURATE_TYPE));
         }
         return root;
@@ -326,7 +330,8 @@ public class VehicleInfoEditFragment extends Fragment {
     private static final int MSG_RETRIEVE_FUEL_TYPE = 3003;
     private static final int MSG_RETRIEVE_RELEASE_DATE = 3004;
     private static final int MSG_RETRIEVE_END = 3005;
-    private static final int MSG_RETRIEVE_CAN_BAURATE_TYPE = 3006;
+    private static final int MSG_RETRIEVE_CAN_BAURATE_TYPE = 4006;
+    private static final int MSG_RETRIEVE_CAN_MODE_TYPE = 4007;
 
     private static class MyHandler extends Handler {
         private final WeakReference<VehicleInfoEditFragment> mFragment;
@@ -358,6 +363,9 @@ public class VehicleInfoEditFragment extends Fragment {
                     break;
                 case MSG_RETRIEVE_CAN_BAURATE_TYPE :
                     fragment.retrieveVehicleCanBaurateType();
+                    break;
+                case MSG_RETRIEVE_CAN_MODE_TYPE :
+                    fragment.retrieveVehicleCanModeType();
                     break;
                 default :
                     break;
@@ -436,18 +444,32 @@ public class VehicleInfoEditFragment extends Fragment {
                 }
                 break;
             case STEP_CAN_BAURRATE:
+                if (mSelectCanBaurate < 0) {
+                    return;
+                }
                 mStepLayout.setBackgroundResource(R.drawable.vehicle_info2_tt2);
                 mStepTextView.setText("SETTINGS");
                 mStepNameTextView.setText("CAN MODE");
 
-                int vehicleType = getVehicleTypeByListPosition(mSelectVehicleTypePosition);
-                if (mSelectedVehicleData.getVehicleType() != vehicleType) {
-                    mManufacturerMap.clear();
-                    mManufacturerArrayList.clear();
+                mSelectedVehicleData.setCanBaurateType(mCanBauratesList.get(mSelectCanBaurate));
+
+                mCurrentStep = STEP_CAN_MODE;
+                mOkButton.setText(R.string.ok_caps);
+                mHandler.sendMessage(mHandler.obtainMessage(MSG_RETRIEVE_CAN_MODE_TYPE));
+                break;
+            case STEP_CAN_MODE:
+                mStepLayout.setBackgroundResource(R.drawable.vehicle_info2_tt2);
+
+                mSelectedVehicleData.setCanModeType(mCanModesList.get(mSelectCanMode));
+
+                if (mListener != null) {
+                    VehicleData vehicleData = mSession.getPreVehicleData();
+                    vehicleData.copyFrom(mSelectedVehicleData);
+
+                    mListener.notifyMessage(VehicleInfoViewFragment.FRAGMENT_TAG, Constants.NotifyMsg.CHANGE_CAN_SETTINGS_INFO, null);
+                    mPressedNextBtn = true;
+                    getActivity().onBackPressed();
                 }
-                mSelectedVehicleData.setVehicleType(vehicleType);
-                mCurrentStep = STEP_2;
-                mHandler.sendMessage(mHandler.obtainMessage(MSG_RETRIEVE_MANUFACTURER));
                 break;
             default:
                 break;
@@ -513,16 +535,16 @@ public class VehicleInfoEditFragment extends Fragment {
                 ret = true;
                 break;
             case STEP_CAN_MODE :
-                mStepLayout.setBackgroundResource(R.drawable.vehicle_info2_tt4);
+                mStepLayout.setBackgroundResource(R.drawable.vehicle_info2_tt1);
                 mStepTextView.setText("SETTINGS");
                 mStepNameTextView.setText("CAN BAURATE");
 
                 mCurrentStep = STEP_CAN_BAURRATE;
                 mOkButton.setText(R.string.next_caps);
                 WidgetUtil.setBtnEnabled(getContext(), mOkButton, true);
-                mVehicleSelectListAdapter.resetArrItem(mVehicleTypeArrayList);
-                mVehicleSelectListAdapter.setSelectedPosition(mSelectFuelTypePosition);
-                mVehicleListView.smoothScrollToPosition(mSelectFuelTypePosition);
+                mVehicleSelectListAdapter.resetArrItem(mCanBauratesList);
+                mVehicleSelectListAdapter.setSelectedPosition(mSelectCanBaurate);
+                mVehicleListView.smoothScrollToPosition(mSelectCanBaurate);
                 break;
             default:
                 break;
@@ -555,6 +577,20 @@ public class VehicleInfoEditFragment extends Fragment {
         mCanBauratesList.add("125kps");
         mCanBauratesList.add("250kps");
         mCanBauratesList.add("500kps");
+
+        mOkButton.setEnabled(true);
+        mHandler.sendMessage(mHandler.obtainMessage(MSG_RETRIEVE_END));
+    }
+
+    private void retrieveVehicleCanModeType() {
+        mOkButton.setEnabled(false);
+        mLoadingLayout.setVisibility(View.VISIBLE);
+        mListLayout.setVisibility(View.GONE);
+
+        mCanModesList.clear();
+
+        mCanModesList.add("Normal");
+        mCanModesList.add("Silent");
 
         mOkButton.setEnabled(true);
         mHandler.sendMessage(mHandler.obtainMessage(MSG_RETRIEVE_END));
@@ -649,6 +685,11 @@ public class VehicleInfoEditFragment extends Fragment {
         Collections.sort(mReleaseDateArrayList, mStringOrderComparator);
         mOkButton.setEnabled(true);
         mHandler.sendMessage(mHandler.obtainMessage(MSG_RETRIEVE_END));
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
     }
 
     private void retrieveCompleted() {
@@ -754,19 +795,21 @@ public class VehicleInfoEditFragment extends Fragment {
                     mSelectReleaseDatePosition = 0;
                 }
                 break;
-            case STEP_CAN_BAURRATE :
+            case STEP_CAN_BAURRATE:
                 mVehicleListView.setAdapter(mVehicleSelectListAdapter);
                 mVehicleSelectListAdapter.resetArrItem(mCanBauratesList);
-
-                if ("".equals(mPreVehicleData.getUniqueID())) {
-                    mVehicleSelectListAdapter.setSelectedPosition(VehicleData.LIST_POS_TYPE_CAR);
-                    mSelectVehicleTypePosition = VehicleData.LIST_POS_TYPE_CAR;
-                } else {
-                    int position = getListPositionByVehicleType(mPreVehicleData.getVehicleType());
-                    mVehicleSelectListAdapter.setSelectedPosition(position);
-                    mVehicleListView.smoothScrollToPosition(position);
-                    mSelectVehicleTypePosition = position;
-                }
+                int pos = mCanBauratesList.indexOf(mPreVehicleData.getCanBaurateType());
+                pos = pos < 0? 0:pos;
+                mVehicleSelectListAdapter.setSelectedPosition(pos);
+                mSelectCanBaurate = pos;
+                break;
+            case STEP_CAN_MODE :
+                mVehicleListView.setAdapter(mVehicleSelectListAdapter);
+                mVehicleSelectListAdapter.resetArrItem(mCanModesList);
+                int pos1 = mCanModesList.indexOf(mPreVehicleData.getCanModeType());
+                pos1 = pos1 < 0? 0:pos1;
+                mVehicleSelectListAdapter.setSelectedPosition(pos1);
+                mSelectCanMode = pos1;
                 break;
         }
         mLoadingLayout.setVisibility(View.GONE);

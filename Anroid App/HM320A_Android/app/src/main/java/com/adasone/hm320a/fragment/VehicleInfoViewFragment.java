@@ -45,6 +45,9 @@ public class VehicleInfoViewFragment extends Fragment {
     private TextView mFuelValueTextView;
     private TextView mReleaseDateValueTextView;
 
+    private TextView mCanBaurateView;
+    private TextView mCanModeView;
+
     public VehicleInfoViewFragment() {
         // Required empty public constructor
     }
@@ -101,6 +104,10 @@ public class VehicleInfoViewFragment extends Fragment {
         mFuelValueTextView = (TextView) root.findViewById(R.id.tv_fuel_value);
         mReleaseDateValueTextView = (TextView) root.findViewById(R.id.tv_release_date_value);
 
+        // Can Setting Views
+        mCanBaurateView = (TextView) root.findViewById(R.id.tv_baurate_value);
+        mCanModeView = (TextView) root.findViewById(R.id.tv_mode_value);
+
         ImageView editVehicleImageView = (ImageView) root.findViewById(R.id.iv_edit_vehicle);
         editVehicleImageView.setOnClickListener(mOnClickListener);
 
@@ -121,12 +128,14 @@ public class VehicleInfoViewFragment extends Fragment {
         AppApplication.getAppApplication().setFontHYGothic700(manufacturerCaptionTextView,
                 modelCaptionTextView, fuelCaptionTextView, releaseDateCaptionTextView,
                 mManufacturerValueTextView, mModelValueTextView, mFuelValueTextView,
-                mReleaseDateValueTextView/*, sendEmailTextView*/);
+                mReleaseDateValueTextView/*, sendEmailTextView*/
+                ,mCanBaurateView, mCanModeView);
         //AppApplication.getAppApplication().setFontHYGothic400(/*sendEmailDescTextView*/);
         AppApplication.getAppApplication().setFontHYNSupungB(sendButton);
 
         mSession.getPreVehicleData().copyFrom(mSession.getDevVehicleData());
         setVehicleInfo(mSession.getPreVehicleData());
+        //setCanSettingsInfo(mSession.getPreVehicleData());
         return root;
     }
 
@@ -183,6 +192,9 @@ public class VehicleInfoViewFragment extends Fragment {
                 case Constants.NotifyMsg.CHANGE_VEHICLE_INFO :
                     setVehicleInfo(mSession.getPreVehicleData());
                     break;
+                case Constants.NotifyMsg.CHANGE_CAN_SETTINGS_INFO :
+                    setCanSettingsInfo(mSession.getPreVehicleData());
+                    break;
                 default :
                     break;
             }
@@ -207,6 +219,13 @@ public class VehicleInfoViewFragment extends Fragment {
             mModelValueTextView.setText(vehicleData.getModel());
             mFuelValueTextView.setText(vehicleData.getFuelType());
             mReleaseDateValueTextView.setText(vehicleData.getReleaseDate());
+        }
+    }
+
+    private void setCanSettingsInfo(VehicleData vehicleData) {
+        if (vehicleData != null ) {
+            mCanBaurateView.setText(vehicleData.getCanBaurateType());
+            mCanModeView.setText(vehicleData.getCanModeType());
         }
     }
 
