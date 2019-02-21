@@ -29,15 +29,15 @@ public class VehicleSelectListAdapter extends BaseAdapter{
 		this.notifyDataSetChanged();
 	}
 
-
-	@Override
-	public int getCount() {
+	public
+	@Override int getCount() {
 		if (mArrList != null) {
 			return mArrList.size();
 		} else {
 			return 0;
 		}
 	}
+
 
 	@Override
 	public long getItemId(int position) {

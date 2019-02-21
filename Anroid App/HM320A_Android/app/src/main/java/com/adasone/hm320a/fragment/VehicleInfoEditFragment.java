@@ -67,6 +67,8 @@ public class VehicleInfoEditFragment extends Fragment {
     private static final int STEP_3 = 3;
     private static final int STEP_4 = 4;
     private static final int STEP_5 = 5;
+    private static final int STEP_CAN_BAURRATE = 21;
+    private static final int STEP_CAN_MODE = 22;
 
     private int mCurrentStep = STEP_1;
 
@@ -87,6 +89,8 @@ public class VehicleInfoEditFragment extends Fragment {
     private ArrayList<String> mModelArrayList = new ArrayList<>();
     private ArrayList<String> mFuelTypeArrayList = new ArrayList<>();
     private ArrayList<String> mReleaseDateArrayList = new ArrayList<>();
+    private ArrayList<String> mCanBauratesList = new ArrayList<>();
+    private ArrayList<String> mCanModesList = new ArrayList<>();
 
     private VehicleData mSelectedVehicleData = new VehicleData();
     private VehicleData mPreVehicleData;
@@ -96,6 +100,8 @@ public class VehicleInfoEditFragment extends Fragment {
     private int mSelectFuelTypePosition = 0;
     private int mSelectReleaseDatePosition = 0;
     private int mEditPanelNumber = 0;
+    private int mSelectCanBaurate = 0;
+    private int mSelectCanMode = 0;
 
     private VehicleSelectListAdapter mVehicleSelectListAdapter = null;
 
@@ -300,6 +306,14 @@ public class VehicleInfoEditFragment extends Fragment {
                             mSelectReleaseDatePosition = position;
                             mVehicleSelectListAdapter.resetArrItem(mReleaseDateArrayList);
                             break;
+                        case STEP_CAN_BAURRATE :
+                            mSelectCanBaurate = position;
+                            mVehicleSelectListAdapter.resetArrItem(mCanBauratesList);
+                            break;
+                        case STEP_CAN_MODE :
+                            mSelectCanMode= position;
+                            mVehicleSelectListAdapter.resetArrItem(mCanModesList);
+                            break;
                         default:
                             break;
                     }
@@ -421,7 +435,20 @@ public class VehicleInfoEditFragment extends Fragment {
                     getActivity().onBackPressed();
                 }
                 break;
+            case STEP_CAN_BAURRATE:
+                mStepLayout.setBackgroundResource(R.drawable.vehicle_info2_tt2);
+                mStepTextView.setText("SETTINGS");
+                mStepNameTextView.setText("CAN MODE");
 
+                int vehicleType = getVehicleTypeByListPosition(mSelectVehicleTypePosition);
+                if (mSelectedVehicleData.getVehicleType() != vehicleType) {
+                    mManufacturerMap.clear();
+                    mManufacturerArrayList.clear();
+                }
+                mSelectedVehicleData.setVehicleType(vehicleType);
+                mCurrentStep = STEP_2;
+                mHandler.sendMessage(mHandler.obtainMessage(MSG_RETRIEVE_MANUFACTURER));
+                break;
             default:
                 break;
         }
@@ -482,6 +509,21 @@ public class VehicleInfoEditFragment extends Fragment {
                 mVehicleSelectListAdapter.setSelectedPosition(mSelectFuelTypePosition);
                 mVehicleListView.smoothScrollToPosition(mSelectFuelTypePosition);
                 break;
+            case STEP_CAN_BAURRATE :
+                ret = true;
+                break;
+            case STEP_CAN_MODE :
+                mStepLayout.setBackgroundResource(R.drawable.vehicle_info2_tt4);
+                mStepTextView.setText("SETTINGS");
+                mStepNameTextView.setText("CAN BAURATE");
+
+                mCurrentStep = STEP_CAN_BAURRATE;
+                mOkButton.setText(R.string.next_caps);
+                WidgetUtil.setBtnEnabled(getContext(), mOkButton, true);
+                mVehicleSelectListAdapter.resetArrItem(mVehicleTypeArrayList);
+                mVehicleSelectListAdapter.setSelectedPosition(mSelectFuelTypePosition);
+                mVehicleListView.smoothScrollToPosition(mSelectFuelTypePosition);
+                break;
             default:
                 break;
         }
@@ -508,11 +550,11 @@ public class VehicleInfoEditFragment extends Fragment {
         mLoadingLayout.setVisibility(View.VISIBLE);
         mListLayout.setVisibility(View.GONE);
 
-        mVehicleTypeArrayList.clear();
+        mCanBauratesList.clear();
 
-        mVehicleTypeArrayList.add("125kps");
-        mVehicleTypeArrayList.add("250kps");
-        mVehicleTypeArrayList.add("500kps");
+        mCanBauratesList.add("125kps");
+        mCanBauratesList.add("250kps");
+        mCanBauratesList.add("500kps");
 
         mOkButton.setEnabled(true);
         mHandler.sendMessage(mHandler.obtainMessage(MSG_RETRIEVE_END));
@@ -710,6 +752,20 @@ public class VehicleInfoEditFragment extends Fragment {
                 } else {
                     mVehicleSelectListAdapter.setSelectedPosition(0);
                     mSelectReleaseDatePosition = 0;
+                }
+                break;
+            case STEP_CAN_BAURRATE :
+                mVehicleListView.setAdapter(mVehicleSelectListAdapter);
+                mVehicleSelectListAdapter.resetArrItem(mCanBauratesList);
+
+                if ("".equals(mPreVehicleData.getUniqueID())) {
+                    mVehicleSelectListAdapter.setSelectedPosition(VehicleData.LIST_POS_TYPE_CAR);
+                    mSelectVehicleTypePosition = VehicleData.LIST_POS_TYPE_CAR;
+                } else {
+                    int position = getListPositionByVehicleType(mPreVehicleData.getVehicleType());
+                    mVehicleSelectListAdapter.setSelectedPosition(position);
+                    mVehicleListView.smoothScrollToPosition(position);
+                    mSelectVehicleTypePosition = position;
                 }
                 break;
         }
