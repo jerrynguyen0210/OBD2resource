@@ -69,15 +69,16 @@
                     android:layout_height="match_parent"
                     android:layout_weight="23"/>
             </LinearLayout>
+
             <TextView
                 android:id="@+id/tv_title"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="124"
                 android:gravity="center"
-                android:textSize="@dimen/size_80px"
+                android:text="@string/obd_check"
                 android:textColor="@color/white"
-                android:text="@string/vehicle_information"/>
+                android:textSize="@dimen/size_80px" />
             <View
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
@@ -95,10 +96,12 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:weightSum="1920">
+
         <View
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="434"/>
+            android:layout_weight="434" />
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
@@ -106,63 +109,58 @@
             android:background="@drawable/vehicle_info_bg"
             android:orientation="vertical"
             android:weightSum="899">
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="130"
                 android:orientation="horizontal"
                 android:weightSum="1080">
+
                 <View
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="84"/>
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="134"
-                    android:src="@drawable/vehicle_info1_icon_car"
-                    android:scaleType="fitCenter"/>
+                    android:layout_weight="84" />
+
                 <TextView
                     android:id="@+id/tv_title_vehicle"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="644"
                     android:gravity="center_vertical"
+                    android:text="@string/options"
                     android:textColor="#fefefe"
-                    android:textSize="@dimen/size_50px"
-                    android:text="@string/vehicle_information"/>
-                <ImageView
-                    android:id="@+id/iv_edit_vehicle"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="134"
-                    android:src="@drawable/vehicle_info1_icon_edit"
-                    android:scaleType="fitCenter"/>
+                    android:textSize="@dimen/size_50px" />
+
                 <View
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="84"/>
+                    android:layout_weight="84" />
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="769"
                 android:orientation="horizontal"
                 android:weightSum="1080">
+
                 <View
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="120"/>
+                    android:layout_weight="120" />
+
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="840"
                     android:orientation="vertical"
                     android:weightSum="769">
+
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_weight="18"/>
+                        android:layout_weight="18" />
 
                     <TextView
                         android:id="@+id/tv_manufacturer_caption"
@@ -177,186 +175,76 @@
                         android:text="@string/manufacturer"
                         android:textColor="#494856"
                         android:textSize="@dimen/size_40px" />
-                    <TextView
-                        android:id="@+id/tv_manufacturer_value"
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="85"
-                        android:gravity="center_vertical"
-                        android:paddingStart="@dimen/size_54px"
-                        android:paddingBottom="@dimen/size_10px"
-                        android:textColor="#00a2ca"
-                        android:textSize="@dimen/size_40px"
-                        android:text="@string/symbol_dash"
-                        android:maxLines="1"
-                        android:ellipsize="end"/>
+
                     <TextView
                         android:id="@+id/tv_model_caption"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_weight="85"
+                        android:ellipsize="end"
                         android:gravity="center_vertical"
+                        android:maxLines="1"
                         android:paddingStart="@dimen/size_18px"
                         android:paddingBottom="@dimen/size_10px"
-                        android:textColor="#494856"
-                        android:textSize="@dimen/size_40px"
                         android:text="@string/model_name"
-                        android:maxLines="1"
-                        android:ellipsize="end"/>
-                    <TextView
-                        android:id="@+id/tv_model_value"
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="85"
-                        android:gravity="center_vertical"
-                        android:paddingStart="@dimen/size_54px"
-                        android:paddingBottom="@dimen/size_10px"
-                        android:textColor="#00a2ca"
-                        android:textSize="@dimen/size_40px"
-                        android:text="@string/symbol_dash"
-                        android:maxLines="1"
-                        android:ellipsize="end"/>
+                        android:textColor="#494856"
+                        android:textSize="@dimen/size_40px" />
+
                     <TextView
                         android:id="@+id/tv_fuel_caption"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_weight="85"
+                        android:ellipsize="end"
                         android:gravity="center_vertical"
+                        android:maxLines="1"
                         android:paddingStart="@dimen/size_18px"
                         android:paddingBottom="@dimen/size_10px"
-                        android:textColor="#494856"
-                        android:textSize="@dimen/size_40px"
                         android:text="@string/fuel_type"
-                        android:maxLines="1"
-                        android:ellipsize="end"/>
-                    <TextView
-                        android:id="@+id/tv_fuel_value"
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="85"
-                        android:gravity="center_vertical"
-                        android:paddingStart="@dimen/size_54px"
-                        android:paddingBottom="@dimen/size_10px"
-                        android:textColor="#00a2ca"
-                        android:textSize="@dimen/size_40px"
-                        android:text="@string/symbol_dash"
-                        android:maxLines="1"
-                        android:ellipsize="end"/>
+                        android:textColor="#494856"
+                        android:textSize="@dimen/size_40px" />
+
                     <TextView
                         android:id="@+id/tv_release_date_caption"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_weight="85"
+                        android:ellipsize="end"
                         android:gravity="center_vertical"
+                        android:maxLines="1"
                         android:paddingStart="@dimen/size_18px"
                         android:paddingBottom="@dimen/size_10px"
-                        android:textColor="#494856"
-                        android:textSize="@dimen/size_40px"
                         android:text="@string/release_date"
-                        android:maxLines="1"
-                        android:ellipsize="end"/>
-                    <TextView
-                        android:id="@+id/tv_release_date_value"
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="85"
-                        android:gravity="center_vertical"
-                        android:paddingStart="@dimen/size_54px"
-                        android:paddingBottom="@dimen/size_10px"
-                        android:textColor="#00a2ca"
-                        android:textSize="@dimen/size_40px"
-                        android:text="@string/symbol_dash"
-                        android:maxLines="1"
-                        android:ellipsize="end"/>
+                        android:textColor="#494856"
+                        android:textSize="@dimen/size_40px" />
+
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_weight="71"/>
+                        android:layout_weight="71" />
                 </LinearLayout>
+
                 <View
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="120"/>
+                    android:layout_weight="120" />
             </LinearLayout>
         </LinearLayout>
+
         <View
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="17"/>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="300"
-            android:orientation="horizontal"
-            android:weightSum="1080">
-            <View
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="120"/>
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="840"
-                android:orientation="vertical"
-                android:weightSum="300">
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="100"
-                    android:orientation="horizontal">
-                    <ImageView
-                        android:id="@+id/iv_email"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:src="@drawable/vehicle_info_icon_mail"
-                        android:scaleType="fitXY"
-                        android:clickable="true"/>
-                    <TextView
-                        android:id="@+id/tv_vehicle_send_to_email"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:layout_marginStart="@dimen/size_20px"
-                        android:textSize="@dimen/size_40px"
-                        android:textColor="@color/vehicle_email_text_color"
-                        android:text="@string/vehicle_info_send_to_email_underline"/>
-                </LinearLayout>
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="20"/>
-                <TextView
-                    android:id="@+id/tv_vehicle_send_to_email_desc"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="160"
-                    android:textSize="@dimen/size_36px"
-                    android:textColor="@color/black"
-                    android:text="@string/vehicle_info_send_to_email_desc"/>
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="20"/>
-            </LinearLayout>
-            <View
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="120"/>
-        </LinearLayout>
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="120"/>
+            android:layout_height="18dp"
+            android:layout_weight="400" />
+
         <Button
             android:id="@+id/btn_send"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
+            android:layout_height="wrap_content"
             android:layout_weight="150"
             android:background="@drawable/selector_bottom_btn"
+            android:text="@string/send_caps"
             android:textColor="@color/button_enable"
-            android:textSize="@dimen/size_50px"
-            android:text="@string/send_caps"/>
+            android:textSize="@dimen/size_50px" />
 
     </LinearLayout>
 </FrameLayout>

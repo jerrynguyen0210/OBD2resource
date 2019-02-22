@@ -119,6 +119,10 @@
     <string name="vehicle_info_send_to_email_desc">Enter [Manufacturer/Model/Fuel type/Release year]</string>
     <string name="vehicle_info_email_extra_text">Manufacturer : \nModel : \nFuel type : \nRelease year : </string>
 
+    <!-- OBD Check screen -->
+    <string name="obd_check">OBD Check</string>
+    <string name="options">Options</string>
+
     <!-- Calibration -->
     <string name="calibration">Calibration</string>
     <string name="calibration_date">Calibration Date</string>

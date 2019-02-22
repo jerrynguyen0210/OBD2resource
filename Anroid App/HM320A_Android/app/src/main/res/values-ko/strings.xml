@@ -119,6 +119,10 @@
     <string name="vehicle_info_send_to_email_desc">[제조사/모델명/연료타입/출고년도]를 기재 하여 메일로 보내 주시면 반영해 드립니다.</string>
     <string name="vehicle_info_email_extra_text">제조사 : \n모델명 : \n연료타입 : \n출고년도 : </string>
 
+    <!-- OBD Check screen -->
+    <string name="obd_check">OBD Check</string>
+    <string name="options">Options</string>
+
     <!-- Calibration -->
     <string name="calibration">캘리브레이션</string>
     <string name="calibration_date">캘리브레이션 날짜</string>
