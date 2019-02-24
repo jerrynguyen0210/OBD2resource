@@ -45,6 +45,7 @@ import com.adasone.hm320a.fragment.DtgInfoViewFragment;
 import com.adasone.hm320a.fragment.EnginerrModeFragment;
 import com.adasone.hm320a.fragment.FirmwareFragment;
 import com.adasone.hm320a.fragment.MainMenuFragment;
+import com.adasone.hm320a.fragment.OBDCheckFragment;
 import com.adasone.hm320a.fragment.SplashFragment;
 import com.adasone.hm320a.fragment.VehicleInfoEditFragment;
 import com.adasone.hm320a.fragment.VehicleInfoViewFragment;
@@ -682,6 +683,9 @@ public class MainActivity extends AppCompatActivity implements OnFragmentInterac
                 break;
             case Menu.FIRMWARE:
                 addFragment(FirmwareFragment.newInstance(), FirmwareFragment.FRAGMENT_TAG, Constants.Anim.NONE);
+                break;
+            case Menu.VEHICLE_OBD_CHECK:
+                addFragment(OBDCheckFragment.newInstance(), OBDCheckFragment.FRAGMENT_TAG, Constants.Anim.NONE);
                 break;
             default:
                 break;

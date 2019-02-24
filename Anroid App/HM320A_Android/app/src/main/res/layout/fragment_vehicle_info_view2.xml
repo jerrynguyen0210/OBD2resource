@@ -14,6 +14,7 @@
      limitations under the License.
 -->
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -74,11 +75,11 @@
                 android:id="@+id/tv_title"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="124"
+                android:layout_weight="160"
                 android:gravity="center"
                 android:text="@string/obd_check"
                 android:textColor="@color/white"
-                android:textSize="@dimen/size_80px" />
+                android:textSize="@dimen/size_144px" />
             <View
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
@@ -106,7 +107,7 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="899"
-            android:background="@drawable/vehicle_info_bg"
+            android:background="@drawable/vehicle_info_obd_check_bg"
             android:orientation="vertical"
             android:weightSum="899">
 
@@ -162,61 +163,10 @@
                         android:layout_height="0dp"
                         android:layout_weight="18" />
 
-                    <TextView
-                        android:id="@+id/tv_manufacturer_caption"
+                    <ListView
+                        android:id="@+id/OBD_CheckList"
                         android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="85"
-                        android:ellipsize="end"
-                        android:gravity="center_vertical"
-                        android:maxLines="1"
-                        android:paddingStart="@dimen/size_18px"
-                        android:paddingBottom="@dimen/size_10px"
-                        android:text="@string/manufacturer"
-                        android:textColor="#494856"
-                        android:textSize="@dimen/size_40px" />
-
-                    <TextView
-                        android:id="@+id/tv_model_caption"
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="85"
-                        android:ellipsize="end"
-                        android:gravity="center_vertical"
-                        android:maxLines="1"
-                        android:paddingStart="@dimen/size_18px"
-                        android:paddingBottom="@dimen/size_10px"
-                        android:text="@string/model_name"
-                        android:textColor="#494856"
-                        android:textSize="@dimen/size_40px" />
-
-                    <TextView
-                        android:id="@+id/tv_fuel_caption"
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="85"
-                        android:ellipsize="end"
-                        android:gravity="center_vertical"
-                        android:maxLines="1"
-                        android:paddingStart="@dimen/size_18px"
-                        android:paddingBottom="@dimen/size_10px"
-                        android:text="@string/fuel_type"
-                        android:textColor="#494856"
-                        android:textSize="@dimen/size_40px" />
-
-                    <TextView
-                        android:id="@+id/tv_release_date_caption"
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="85"
-                        android:ellipsize="end"
-                        android:gravity="center_vertical"
-                        android:maxLines="1"
-                        android:paddingStart="@dimen/size_18px"
-                        android:paddingBottom="@dimen/size_10px"
-                        android:text="@string/release_date"
-                        android:textColor="#494856"
-                        android:textSize="@dimen/size_40px" />
+                        android:layout_height="match_parent" />
 
                     <View
                         android:layout_width="match_parent"

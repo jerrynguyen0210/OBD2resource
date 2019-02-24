@@ -277,7 +277,8 @@ public class MainMenuFragment extends Fragment {
                 case R.id.layout_4menus_menu2:
                     // fall-through
                 case R.id.layout_5menus_menu2:
-                    mListener.onMenuSelected(Constants.Menu.CALIBRATION_CAM_LOCATION, 0);
+                    //mListener.onMenuSelected(Constants.Menu.CALIBRATION_CAM_LOCATION, 0);
+                    mListener.onMenuSelected(Constants.Menu.VEHICLE_OBD_CHECK, 0);
                     break;
                 case R.id.layout_5menus_menu3:
                     mListener.onMenuSelected(Constants.Menu.DTG, 0);
