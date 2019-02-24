@@ -11,6 +11,7 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.util.Log;
+import android.view.ContextMenu;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -618,6 +619,11 @@ public class VehicleInfoEditFragment extends Fragment {
             WidgetUtil.setBtnEnabled(getContext(), mOkButton, true);
             mHandler.sendMessage(mHandler.obtainMessage(MSG_RETRIEVE_END));
         }
+    }
+
+    @Override
+    public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
+        super.onCreateContextMenu(menu, v, menuInfo);
     }
 
     private void retrieveModel() {

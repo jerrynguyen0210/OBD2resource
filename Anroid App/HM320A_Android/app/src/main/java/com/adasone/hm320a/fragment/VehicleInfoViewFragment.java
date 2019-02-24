@@ -27,7 +27,12 @@ import com.adasone.hm320a.data.VehicleData;
 import com.adasone.hm320a.interfaces.OnActivityInteractionListener;
 import com.adasone.hm320a.interfaces.OnFragmentInteractionListener;
 
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.OutputStreamWriter;
 import java.lang.ref.WeakReference;
+
+import static android.content.Context.MODE_PRIVATE;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -246,14 +251,15 @@ public class VehicleInfoViewFragment extends Fragment {
                     mListener.onMenuSelected(Constants.Menu.VEHICLE_CAN_SETTINGS_EDIT, 0);
                     break;
                 case R.id.btn_send :
-                    if (!mListener.isUSBConnected()) {
-                        Toast.makeText(getContext(), R.string.check_usb_connection, Toast.LENGTH_SHORT).show();
-                    } else if (!vehicleInfoValidationCheck()) {
-                        Toast.makeText(getContext(), R.string.enter_vehicle_info , Toast.LENGTH_SHORT).show();
-                    } else {
-                        mListener.reqWriteVehicleInfo();
-                        getActivity().onBackPressed();
-                    }
+//                    if (!mListener.isUSBConnected()) {
+//                        Toast.makeText(getContext(), R.string.check_usb_connection, Toast.LENGTH_SHORT).show();
+//                    } else if (!vehicleInfoValidationCheck()) {
+//                        Toast.makeText(getContext(), R.string.enter_vehicle_info , Toast.LENGTH_SHORT).show();
+//                    } else {
+//                        mListener.reqWriteVehicleInfo();
+//                        getActivity().onBackPressed();
+//                    }
+                    WriteBtn();
                     break;
  //               case R.id.iv_email :
                     // fall-through
@@ -266,6 +272,24 @@ public class VehicleInfoViewFragment extends Fragment {
         }
     };
 
+    // write text to file
+    private void WriteBtn() {
+        // add-write text into file
+        try {
+            File file = new File(getContext().getFilesDir(), "phuoc.txt");
+            FileOutputStream fileout = getContext().openFileOutput("mytextfile.txt", MODE_PRIVATE);
+            OutputStreamWriter outputWriter=new OutputStreamWriter(fileout);
+            outputWriter.write("tested");
+            outputWriter.close();
+
+            //display file saved message
+            Toast.makeText(getContext(), "File saved successfully!",
+                    Toast.LENGTH_SHORT).show();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 
     private static class MyHandler extends Handler {
         private final WeakReference<VehicleInfoViewFragment> mFragment;

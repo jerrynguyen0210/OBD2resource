@@ -40,8 +40,6 @@ public class OBDCheckFragment extends Fragment {
 
     private final MyHandler mHandler = new MyHandler(this);
     private OnFragmentInteractionListener mListener;
-    private Session mSession;
-    ListView mListView;
 
     String[] mobileArray = {"Turn Signal Left",
                             "Turn Signal Right",
@@ -70,17 +68,21 @@ public class OBDCheckFragment extends Fragment {
         }
     }
 
-//    @Override
-////    public void onCreate(Bundle savedInstanceState) {
-////        super.onCreate(savedInstanceState);
-////        Activity activity = getActivity();
-////        if (activity != null) {
-////            activity.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-////        } else {
-////            Log.e(TAG, "getActivity() is null !!");
-////        }
-////        mSession = mListener.getSession();
-////    }
+    public View.OnClickListener mOnClickListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            switch (view.getId()) {
+                case R.id.iv_menu :
+                    mListener.onRequestMainMenu(false);
+                    break;
+                case R.id.iv_back :
+                    getActivity().onBackPressed();
+                    break;
+                default:
+                    break;
+            }
+        }
+    };
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
@@ -88,13 +90,18 @@ public class OBDCheckFragment extends Fragment {
         // Inflate the layout for this fragment
         View root= inflater.inflate(R.layout.fragment_vehicle_info_view2, container, false);
 
-        //ImageView menuImageView = (ImageView) root.findViewById(R.id.iv_menu);
-        mListView = (ListView) root.findViewById(R.id.OBD_CheckList);
+        ImageView menuImageView = (ImageView) root.findViewById(R.id.iv_menu);
+        ImageView backImageView = (ImageView) root.findViewById(R.id.iv_back);
+        ListView listView = (ListView) root.findViewById(R.id.OBD_CheckList);
+
+        //Set event listen
+        menuImageView.setOnClickListener(mOnClickListener);
+        backImageView.setOnClickListener(mOnClickListener);
 
         ArrayAdapter adapter = new ArrayAdapter<String>(getContext(),
                 R.layout.obdcheck_list_items, mobileArray);
         if (getContext() != null) {
-            mListView.setAdapter(adapter);
+            listView.setAdapter(adapter);
         }
 
         return root;
