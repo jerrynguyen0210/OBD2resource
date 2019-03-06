@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:weightSum="100.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/tvFrameId" android:text="123" style="@style/FrameTable.Col1" />
+    <TextView android:gravity="left" android:id="@id/tvData" android:text="" style="@style/FrameTable.Col2" />
+    <TextView android:id="@id/tvCount" android:text="" style="@style/FrameTable.Col3" />
+    <TextView android:id="@id/tvInterval" android:text="" style="@style/FrameTable.Col4" />
+</LinearLayout>

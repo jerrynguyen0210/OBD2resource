@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="settings_orientation">
+        <item>Portrait</item>
+        <item>Landscape</item>
+        <item>Sensor</item>
+    </string-array>
+    <string-array name="settings_orientation_value">
+        <item>PORTRAIT</item>
+        <item>LANDSCAPE</item>
+        <item>SENSOR</item>
+    </string-array>
+</resources>

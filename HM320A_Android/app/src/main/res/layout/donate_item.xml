@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/ivSelection" android:padding="8.0dip" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/adapteroff" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:weightSum="100.0">
+        <TextView android:id="@id/tvTitle" android:text="123" android:layout_weight="85.0" style="@style/DonateItem.Col" />
+        <TextView android:textColor="@android:color/holo_green_light" android:gravity="center_horizontal" android:id="@id/tvCount" android:text="0" android:layout_weight="15.0" style="@style/DonateItem.Col" />
+    </LinearLayout>
+</LinearLayout>

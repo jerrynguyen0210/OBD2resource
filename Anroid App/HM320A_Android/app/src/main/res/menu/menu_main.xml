@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@id/menu_action_clear_data" android:orderInCategory="30" android:title="@string/cap_menu_clear_data" android:showAsAction="never" />
+    <item android:id="@id/menu_action_settings" android:orderInCategory="50" android:title="@string/cap_menu_settings" android:showAsAction="never" />
+    <item android:id="@id/menu_action_send_email" android:orderInCategory="80" android:title="@string/cap_menu_send_email" android:showAsAction="never" />
+    <!--<item android:id="@id/menu_action_donation" android:orderInCategory="90" android:title="@string/cap_menu_donation" android:showAsAction="never" />-->
+    <item android:id="@id/menu_action_about" android:visible="true" android:orderInCategory="90" android:title="@string/cap_menu_about" android:showAsAction="never" />
+</menu>

@@ -17,6 +17,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.adasone.hm320a.R;
 import com.adasone.hm320a.application.AppApplication;
@@ -284,6 +285,11 @@ public class MainMenuFragment extends Fragment {
                     mListener.onMenuSelected(Constants.Menu.DTG, 0);
                     break;
                 case R.id.layout_4menus_menu4:
+//                    mListener.onMenuSelected(Constants.Menu.DTG, 0);
+                    Toast.makeText(getActivity(),"Engineermode triggerd", Toast.LENGTH_SHORT).show();
+                    Intent intent =new Intent(MainMenuFragment.this.getActivity(), com.adasone.hm320a.canbusanalyzer.ActivityEngineer.class); // = new Intent(MainMenuFragment.this,obd2scantool.canbusanalyzer.ActivityEngineer.class);
+                    startActivity(intent);
+                    break;
                     // fall-through
                 case R.id.layout_5menus_menu4:
                     mListener.onMenuSelected(Constants.Menu.VIDEO, 0);

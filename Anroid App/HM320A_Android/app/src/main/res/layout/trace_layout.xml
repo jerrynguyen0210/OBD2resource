@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/tabTrace" android:layout_width="fill_parent" android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout  android:orientation="horizontal" android:id="@id/gbTraceButtons" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true">
+        <ImageButton android:id="@id/btSaveTrace" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/button_save" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@id/gbTraceStatus" android:background="@color/back1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_above="@id/gbTraceButtons">
+        <TextView android:id="@id/tvTraceStatusHead" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="2.0sp" android:text="@string/str_trace_status_head" />
+        <TextView android:id="@id/tvTraceStatus" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="2.0sp" android:text="0" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/gbTrace" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/gbTraceStatus" android:layout_below="@id/gbTraceButtons">
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:weightSum="100.0">
+            <TextView android:text="@string/cap_table_number" style="@style/FrameTrace.Col1" />
+            <TextView android:text="@string/cap_table_time" style="@style/FrameTrace.Col2" />
+            <TextView android:text="@string/cap_table_id" style="@style/FrameTrace.Col3" />
+            <TextView android:text="@string/cap_table_length" style="@style/FrameTrace.Col4" />
+            <TextView android:text="@string/cap_table_data" style="@style/FrameTrace.Col5" />
+        </LinearLayout>
+        <ListView android:id="@id/lvFrameTrace" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </LinearLayout>
+</RelativeLayout>

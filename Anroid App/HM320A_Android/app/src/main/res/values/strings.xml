@@ -1,7 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_name">ADAS Manager</string>
 
+    <!-- string for engineermode-->
+    <string name="common_google_play_services_unknown_issue" translatable="false">%1$s is having trouble with Google Play services. If the problem persists, please contact the developer for assistance.</string>
+    <string name="cap_button_apply" translatable="false">Apply</string>
+    <string name="cap_button_cancel" translatable="false">Cancel</string>
+    <string name="cap_button_continue" translatable="false">Continue</string>
+    <string name="cap_button_exit" translatable="false">Exit</string>
+    <string name="cap_button_make" translatable="false">Make</string>
+    <string name="cap_button_make_donate" translatable="false">Make donate</string>
+    <string name="cap_button_make_once_more" translatable="false">Make once more</string>
+    <string name="cap_can_settings" translatable="false">Can settings for</string>
+    <string name="cap_pid_settings" translatable="false">PID settings </string>
+    <string name="cap_pid_mode" translatable="false">PID check mode </string>
+    <string name="cap_pid_value" translatable="false">Type </string>
+    <string name="cap_channel1" translatable="false">Channel1</string>
+    <string name="cap_channel2" translatable="false">Channel2</string>
+    <string name="cap_error" translatable="false">Error</string>
+    <string name="cap_header_mode" translatable="false">Mode</string>
+    <string name="cap_display_mode" translatable="false">Display</string>
+    <string name="cap_header_rate" translatable="false">Rate</string>
+    <string name="cap_header_select_donate" translatable="false">Select donation you want to make</string>
+    <string name="cap_menu_about" translatable="false">About</string>
+    <string name="cap_menu_clear_data" translatable="false">Clear data</string>
+    <string name="cap_menu_donation" translatable="false">Donation</string>
+    <string name="cap_menu_send_email" translatable="false">Send log to developer</string>
+    <string name="cap_menu_settings" translatable="false">Settings</string>
+    <string name="cap_set_keep_screen_on" translatable="false">Keep screen on while bus listening</string>
+    <string name="cap_set_screen_orientation" translatable="false">Screen orientation</string>
+    <string name="cap_tab_log" translatable="false">Log</string>
+    <string name="cap_tab_table" translatable="false">Table</string>
+    <string name="cap_tab_trace" translatable="false">Trace</string>
+    <string name="cap_table_count" translatable="false">Count</string>
+    <string name="cap_table_data" translatable="false">Data</string>
+    <string name="cap_table_id" translatable="false">PID</string>
+    <string name="cap_table_interval" translatable="false">Cycle</string>
+    <string name="cap_table_length" translatable="false">Len</string>
+    <string name="cap_table_number" translatable="false">\#</string>
+    <string name="cap_table_time" translatable="false">Time</string>
+    <string name="mode_extended" translatable="false">Extended</string>
+    <string name="mode_standard" translatable="false">Standard</string>
+    <string name="msg_donation_service_error" translatable="false">Error of connection with Google billing service</string>
+    <string name="msg_gratitude_for_donation" translatable="false">Thank you for participation</string>
+    <string name="str_msg_adapter_not_connected" translatable="false">CAN bus adapter is not connected</string>
+    <string name="str_msg_need_btr_set" translatable="false">You should set btr registers value</string>
+    <string name="str_trace_status_head" translatable="false">General frame count:</string>
+    <string name="txt_adapter_header" translatable="false">USB-CAN OBD2 Scan tool</string>
+    <string name="accept" translatable="false">Accept</string>
+    <string name="ads_unit_id_demo" translatable="false">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="ads_unit_id_trace" translatable="false">ca-app-pub-1328633298301741/2448696141</string>
+    <string name="auth_google_play_services_client_facebook_display_name" translatable="false">Facebook</string>
+    <string name="auth_google_play_services_client_google_display_name" translatable="false">Google</string>
+    <string name="btcap_check" translatable="false">↺</string>
+    <string name="create_calendar_message" translatable="false">Allow Ad to create a calendar event?</string>
+    <string name="create_calendar_title" translatable="false">Create calendar event</string>
+    <string name="decline" translatable="false">Decline</string>
+    <string name="def_set_screen_orientation" translatable="false">PORTRAIT</string>
+    <string name="store_picture_message" translatable="false">Allow Ad to store image in Picture gallery?</string>
+    <string name="store_picture_title" translatable="false">Save image</string>
     <!-- Common -->
     <string name="device_name">HM320</string>
     <string name="symbol_dash">-</string>

@@ -1,0 +1,266 @@
+<resources
+    xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">ADAS Manager</string>
+
+    <!-- Common -->
+    <string name="device_name">HM320</string>
+    <string name="symbol_dash">-</string>
+    <string name="unit_cm">cm</string>
+    <string name="main_date_time_display_format">yyyy.MM.dd,hh:mm,a</string>
+    <string name="default_date_format">yyyy.MM.dd</string>
+    <string name="calibration_date_format">yyyy-MM-dd</string>
+    <string name="yes">예</string>
+    <string name="yes_caps">예</string>
+    <string name="no">아니오</string>
+    <string name="no_caps">아니오</string>
+    <string name="send">전송</string>
+    <string name="send_caps">전송</string>
+    <string name="ok">확인</string>
+    <string name="ok_caps">확인</string>
+    <string name="next">다음</string>
+    <string name="next_caps">다음</string>
+    <string name="save">저장</string>
+    <string name="save_caps">저장</string>
+    <string name="select">선택</string>
+    <string name="select_caps">선택</string>
+    <string name="cancel">취소</string>
+    <string name="cancel_caps">취소</string>
+    <string name="download">다운로드</string>
+    <string name="download_caps">다운로드</string>
+    <string name="delete">삭제</string>
+    <string name="delete_caps">삭제</string>
+    <string name="delete_count">삭제 (%1$d / %2$d)</string>
+    <string name="delete_caps_count">삭제 (%1$d / %2$d)</string>
+    <string name="play">재생</string>
+    <string name="play_caps">재생</string>
+    <string name="connected_to_device">디바이스와 연결되었습니다.</string>
+    <string name="disconnected_to_device">디바이스와 연결이 해제 되었습니다.</string>
+    <string name="connection_with_device_failed">디바이스와의 연결에 실패했습니다.</string>
+    <string name="permission_needs_description">기능 활성화를 위해서 해당 권한이 필요합니다.</string>
+    <string name="permission_denied_description">권한 승인이 거부되었습니다. 다음 과정으로 진행할 수 없습니다.</string>
+    <string name="check_usb_connection">USB 연결 상태를 확인해 주세요.</string>
+    <string name="check_network_connection">네트워크에 연결할 수 없습니다.\n네트위크 설정을 확인한 후 다시 시도 하세요.</string>
+    <string name="error_reason">[오류] %1$s.</string>
+    <string name="server_error_other_parsing_error">서버 오류 코드. 0001</string>
+    <string name="server_error_result_key_not_exist">서버 오류 코드. 0002</string>
+    <string name="server_error_result_fail">서버 오류 코드. 0003</string>
+    <string name="server_error_key_not_exist">서버 오류 코드. 0004</string>
+    <string name="server_error_file_size">서버 오류 코드. 0005</string>
+    <string name="server_error_items_empty">서버 오류 코드. 0006</string>
+    <string name="unknown">알 수 없음</string>
+    <string name="device_connection_failure">연결 실패</string>
+    <string name="device_connection_failure_desc">디바이스와의 연결에 실패했습니다.\n앱을 종료 시키고 USB 케이블을 다시 연결해 주세요.</string>
+    <string name="device_connection_dialog_title">USB 연결 상태</string>
+    <string name="device_connection_dialog_open_desc">디바이스와 연결되었습니다.</string>
+    <string name="device_connection_dialog_close_desc">디바이스와 연결이 해제 되었습니다.</string>
+    <string name="device_no_response">디바이스에서 응답이 없습니다.</string>
+    <string name="error_wrong_format">오류 : 설정 값이 형식에 맞지 않습니다.</string>
+    <string name="notification">알림</string>
+    <string name="insufficient_storage">저장 공간이 부족합니다.</string>
+    <string name="latest_date_of_change">변경 날짜 : %1$s</string>
+    <string name="deleting">삭제 중 &#8230;</string>
+    <string name="notice">알림</string>
+
+    <!-- Vehicle Information -->
+    <string name="vehicle_information">차량 정보</string>
+    <string name="driver_information">운전자 정보</string>
+    <string name="manufacturer">제조사</string>
+    <string name="model">모델</string>
+    <string name="model_name">모델명</string>
+    <string name="fuel_type">연료타입</string>
+    <string name="release_date">출고년도</string>
+
+    <string name="vehicle_type_car">일반</string>
+    <string name="vehicle_type_bus">버스</string>
+    <string name="vehicle_type_truck">트럭</string>
+
+    <string name="vehicle_type">차량유형</string>
+    <string name="vehicle_identification_number">차대번호</string>
+    <string name="vehicle_registration_number">차량 등록번호</string>
+    <string name="business_registration_number">운송 사업자 등록번호</string>
+    <string name="driver_code">운전자 코드</string>
+
+    <string name="select_vehicle_type">차량유형을 선택해 주세요.</string>
+    <string name="enter_vin_code">차대번호를 입력해 주세요.</string>
+    <string name="wrong_vin_code">차대번호가 올바르지 않습니다.\n다시 입력해 주세요.</string>
+    <string name="enter_vehicle_registration_number">차량 등록번호를 입력해 주세요.</string>
+    <string name="wrong_vehicle_registration_number">차량 등록번호가 올바르지 않습니다.\n다시 입력해 주세요.</string>
+    <string name="enter_business_registration_number">운송 사업자 등록번호를 입력해 주세요.</string>
+    <string name="wrong_business_registration_number">운송 사업자 등록번호가 올바르지 않습니다.\n다시 입력해 주세요.</string>
+    <string name="enter_driver_code">운전자 코드를 입력해 주세요.</string>
+    <string name="wrong_driver_code">운전자 코드가 올바르지 않습니다.\n다시 입력해 주세요.</string>
+
+    <string name="enter_vehicle_info">차량 정보를 입력해 주세요.</string>
+    <string name="enter_driver_info">운전자 정보를 입력해 주세요.</string>
+
+    <string name="type_city_bus">11 시내버스</string>
+    <string name="type_rural_bus">12 농어촌버스</string>
+    <string name="type_town_bus">13 마을버스</string>
+    <string name="type_intercity_bus">14 시외버스</string>
+    <string name="type_express_bus">15 고속버스</string>
+    <string name="type_chartered_bus">16 전세버스</string>
+    <string name="type_special_passenger_vehicle">17 특수여객자동차</string>
+    <string name="type_regular_taxi">21 일반택시</string>
+    <string name="type_private_taxi">22 개인택시</string>
+    <string name="type_general_lorry">31 일반화물자동차</string>
+    <string name="type_individual_lorry">32 개별화물자동차</string>
+    <string name="type_non_commercial_vehicle">41 비사업용자동차</string>
+
+    <string name="step1">1 단계</string>
+    <string name="step2">2 단계</string>
+    <string name="step3">3 단계</string>
+    <string name="step4">4 단계</string>
+    <string name="step5">5 단계</string>
+
+    <string name="success_send_vehicle_info">차량 정보가 설정 되었습니다.</string>
+
+    <string name="vehicle_info_send_to_email">차량 정보 등록 신청</string>
+    <string name="vehicle_info_send_to_email_underline"><u>차량 정보 등록 신청</u></string>
+    <string name="vehicle_info_send_to_email_desc">[제조사/모델명/연료타입/출고년도]를 기재 하여 메일로 보내 주시면 반영해 드립니다.</string>
+    <string name="vehicle_info_email_extra_text">제조사 : \n모델명 : \n연료타입 : \n출고년도 : </string>
+
+    <!-- OBD Check screen -->
+    <string name="obd_check">OBD Check</string>
+    <string name="options">Options</string>
+
+    <!-- Calibration -->
+    <string name="calibration">캘리브레이션</string>
+    <string name="calibration_date">캘리브레이션 날짜</string>
+    <string name="camera_height">카메라 높이</string>
+    <string name="vehicle_width">차량 폭</string>
+    <string name="camera_to_bumper">카메라와 범퍼와의 거리</string>
+
+    <string name="bumper_to_chess">범퍼와 체스보드의 거리</string>
+    <string name="chess_height">체스보드 하단 높이</string>
+
+    <string name="camera_height_help_title">[A] 카메라 높이</string>
+    <string name="vehicle_width_help_title">[B] 차량 폭</string>
+    <string name="camera_to_bumper_help_title">[C] 카메라와 범퍼와의 거리</string>
+
+    <string name="camera_height_help_desc">지면부터 카메라 렌즈 위치까지의\n높이를 측정하여 입력해 주세요.</string>
+    <string name="vehicle_width_help_desc">타이어 양쪽 끝에서 끝의\n길이를 측정하여 입력해 주세요.</string>
+    <string name="camera_to_bumper_help_desc">차량 범퍼부터 카메라 렌즈 위치까지의\n길이를 측정하여 입력해 주세요.</string>
+
+    <string name="enter_bumper_to_chess">차량 범퍼부터 체스 보드 위치까지의\n길이를 측정하여 입력해 주세요.</string>
+    <string name="enter_chess_height">지면부터 체스 보드 하단 까지의\n높이를 측정하여 입력해 주세요.</string>
+
+    <string name="bonnet_line">보닛 라인</string>
+    <string name="vanishing_point">소실점</string>
+    <string name="meter_5">5 미터</string>
+    <string name="meter_8">8 미터</string>
+    <string name="meter_10">10 미터</string>
+    <string name="meter_15">15 미터</string>
+    <string name="total">종합</string>
+    <string name="zoom_in">확대</string>
+    <string name="zoom_out">축소</string>
+    <string name="measure">측정</string>
+    <string name="no_bonnet">라인 없음</string>
+    <string name="bonnet">라인</string>
+
+    <string name="enter_camera_height">카메라 높이를 입력해 주세요.</string>
+    <string name="enter_vehicle_width">차량 폭을 입력해 주세요.</string>
+    <string name="enter_camera_to_bumper">카메라와 범퍼와의 거리를 입력해 주세요.</string>
+
+    <string name="calibration_img_not_exit">캘리브레이션 이미지가 없습니다.\n디바이스에서 이미지를 전송해 주세요.</string>
+    <string name="calibration_auto_img_not_exit">자동 캘리브레이션 이미지가 없습니다.\n디바이스에서 이미지를 전송해 주세요.</string>
+    <string name="calibration_img_received">캘리브레이션 이미지를 전송 받았습니다.</string>
+
+    <string name="success_send_calibration_info">켈리브레이션 정보가 설정 되었습니다.</string>
+    <string name="vanishing_point_invalid">소실점 또는 4 개의 캘리브레이션 포인트를 다시 설정해 주세요.</string>
+
+    <string name="measurement_not_complete">측정을 완료해 주세요.</string>
+    <string name="measured_value_incorrect">캘리브레이션 값이 올바르지 않습니다.\n다시 시도해 주세요.</string>
+    <string name="failed_recognize_chessboard">체스 보드 인식에 실패 하였습니다.</string>
+
+    <!-- DTG Information -->
+    <string name="dtg_setting">운행 기록계 설정</string>
+    <string name="dtg_temporary_desc">DTG 서비스 준비 중</string>
+    <string name="success_send_dtg_info">DTG 정보가 설정 되었습니다.</string>
+
+    <!-- Recorded Video -->
+    <string name="recorded_video">녹화 영상</string>
+    <string name="normal">일반</string>
+    <string name="event">이벤트</string>
+
+    <string name="download_video_title">녹화 영상 다운로드 중 &#8230;</string>
+    <string name="download_video_file_name">파일명 : %1$s</string>
+    <string name="download_video_file_size">크기 : %1$s / %2$s KB</string>
+    <string name="download_video_file_size_unknown">크기 : </string>
+    <string name="no_files">목록 없음</string>
+    <string name="date">날짜</string>
+    <string name="time">시간</string>
+    <string name="file_name">파일명</string>
+
+    <string name="no_downloaded_file_can_be_deleted">삭제 가능한 녹화 영상이 없습니다.</string>
+
+    <string name="downloaded_file_count_one">다운로드 영상 : %1$d</string>
+    <string name="downloaded_file_count_other">다운로드 영상 : %1$d</string>
+    <plurals name="downloaded_file_count">
+        <item quantity="one">@string/downloaded_file_count_other</item>
+        <item quantity="other">@string/downloaded_file_count_other</item>
+    </plurals>
+
+    <string name="delete_downloaded_file_title_one">다운로드 파일 삭제</string>
+    <string name="delete_downloaded_file_title_other">다운로드 파일 삭제</string>
+    <plurals name="delete_downloaded_file_title">
+        <item quantity="one">@string/delete_downloaded_file_title_one</item>
+        <item quantity="other">@string/delete_downloaded_file_title_other</item>
+    </plurals>
+
+    <string name="delete_downloaded_file_count_one">다운로드 파일 %1$d개를 삭제 합니다.</string>
+    <string name="delete_downloaded_file_count_other">다운로드 파일 %1$d개를 삭제 합니다.</string>
+    <plurals name="delete_downloaded_file_count">
+        <item quantity="one">@string/delete_downloaded_file_count_one</item>
+        <item quantity="other">@string/delete_downloaded_file_count_other</item>
+    </plurals>
+
+    <!-- Exo player -->
+    <string name="player_error_querying_decoders">Unable to query device decoders</string>
+    <string name="player_error_no_secure_decoder">This device does not provide a secure decoder for <xliff:g id="mime_type">%1$s</xliff:g></string>
+    <string name="player_error_no_decoder">This device does not provide a decoder for <xliff:g id="mime_type">%1$s</xliff:g></string>
+    <string name="player_error_instantiating_decoder">Unable to instantiate decoder <xliff:g id="decoder_name">%1$s</xliff:g></string>
+    <string name="player_error_unsupported_video">Media includes video tracks, but none are playable by this device</string>
+    <string name="player_error_unsupported_audio">Media includes audio tracks, but none are playable by this device</string>
+    <string name="player_error_loading_data_from_source">Loading error.</string>
+    <string name="player_error_unexpected">Runtime error.</string>
+
+    <!-- Firmware Update -->
+    <string name="firmware_update">펌웨어 업데이트</string>
+    <string name="firmware_version">펌웨어 버전</string>
+    <string name="firmware_version_with_value">버전 : %1$s</string>
+    <string name="version_check">버전 확인</string>
+    <string name="latest_version">최신 버전</string>
+    <string name="latest_version_desc">최신 펌웨어 입니다.</string>
+    <string name="download_firmware_download_title">펌웨어 다운로드 중 &#8230;</string>
+    <string name="download_firmware_download_desc">펌웨어를 다운로드 하고 있습니다.\n앱을 종료하지 말고 기다려 주세요.</string>
+    <string name="download_firmware_send_title">펌웨어 전송 중 &#8230;</string>
+    <string name="download_firmware_send_desc">펌웨어를 전송 하고 있습니다.\n앱을 종료하지 말고 기다려 주세요.</string>
+    <string name="found_new_version">새 버전이 있습니다(%1$s MB)\n지금 다운로드 받겠습니까?</string>
+    <string name="new_version">새 버전</string>
+    <string name="download_complete">다운로드 완료</string>
+    <string name="download_complete_description">다운로드가 완료 되었습니다.</string>
+    <string name="transfer_complete_description">전송이 완료 되었습니다.</string>
+    <string name="download_complete_need_usb_connection">다운로드가 완료 되었습니다.\nUSB 케이블을 연결하여 디바이스에 전송해 주세요.</string>
+    <string name="exist_new_firmware_file_need_usb_connection">다운로드 완료된 새 버전이 있습니다.\nUSB 케이블을 연결하여 디바이스에 전송해 주세요.</string>
+    <string name="exist_new_firmware_file_transfer_now_question">다운로드 완료된 새 버전이 있습니다.\n지금 디바이스에 전송 하시겠습니까?</string>
+    <string name="unknown_version_need_connection">버전을 알 수 없습니다.\n디바이스에 연결해 주세요.</string>
+
+    <string name="version_incompatible_update_app">디바이스와 앱 버전이 호환되지 않습니다.\n앱을 업데이트해주세요.</string>
+    <string name="version_incompatible_update_device">디바이스와 앱 버전이 호환되지 않습니다.\n디바이스 펌웨어를 업데이트 해주세요.</string>
+
+    <!-- Communication error -->
+    <string name="comm_error_unknown_version">[오류]알 수 없는 디바이스 버전.</string>
+    <string name="comm_error_result_fail">[오류]요청 실패 : (%1$s)</string>
+    <string name="comm_error_result_unknown">[오류]알수 없는 결과 : (%1$s)</string>
+    <string name="comm_error_exception">[오류]데이터 오류 : (%1$s)</string>
+    <string name="comm_error_file_not_exist">파일이 존재 하지 않습니다.\n이미 지워진 파일 일 수 있습니다. </string>
+    <string name="comm_error_file_size_zero">파일 크기가 0 입니다..</string>
+
+    <!-- Debug -->
+    <string name="debug_calibration_bonnet">Bonnet Y : %1$d</string>
+    <string name="debug_calibration_no_bonnet_line">Bonnet Y : No line</string>
+    <string name="debug_calibration_vanishing">Center X : %1$d\nVanishing Y : %2$d</string>
+    <string name="debug_calibration_distance">Far Y : %1$d\nFar Left X : %2$d\nFar Right X : %3$d\nNear Y : %4$d\nNear Left X : %5$d\nNear Right X : %6$d</string>
+    <string name="debug_calibration_total">Bonnet Y : %1$d\nCenter X : %2$d\nVanishing Y : %3$d\nFar Y : %4$d\nFar Left X : %5$d\nFar Right X : %6$d\nNear Y : %7$d\nNear Left X : %8$d\nNear Right X : %9$d</string>
+    <string name="debug_calibration_no_bonnet_line_total">Bonnet Y : No line\nCenter X : %1$d\nVanishing Y : %2$d\nFar Y : %3$d\nFar Left X : %4$d\nFar Right X : %5$d\nNear Y : %6$d\nNear Left X : %7$d\nNear Right X : %8$d</string>
+</resources>

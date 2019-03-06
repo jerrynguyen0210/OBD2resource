@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android" xmlns:ads="http://schemas.android.com/apk/res-auto">
+    <usb-device vendor-id="1240" product-id="82"/>
+    <usb-device vendor-id="1240" product-id="83"/>
+    <usb-device vendor-id="1240" product-id="95"/>
+</resources>
